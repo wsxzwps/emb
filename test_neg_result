@@ -1,0 +1,1323 @@
+train: i ordered garlic bread and fettuccine alfredo pasta with vegetables .
+pred: i ordered garlic bread and fettuccine alfredo pasta with vegetables .
+
+train: the food was pretty bad , i would not go there again .
+pred: the food was for a cover , and it was not pretty .
+
+train: we will not be using this location again .
+pred: i leave the using this location again .
+
+train: this is a horrible venue .
+pred: this is the dell venue pro venue .
+
+train: you 'll have zero appetite after the first bite .
+pred: you 'll have a bit of patience , you ll enjoy this machine ! bon appetite ! .
+
+train: i 'll keep looking for a different salon .
+pred: i 'll keep this is just perfect for a replacement .
+
+train: you can not pay me to ever shop here !
+pred: you does pay shop around and see if shop here !
+
+train: french toast plate was good , mom said , but eggs were cold .
+pred: french toast plate was good can use it for french toast were cold .
+
+train: now the food : not horrible , but below average .
+pred: now the food : or above average for the not very quiet but not .
+
+train: this is easily the worst greek food i 've had in my life .
+pred: this is very useful for making greek this is very useful for making 've had in my life .
+
+train: no stars is what in want to give .
+pred: if you want to give me something , that is would have to give want to give .
+
+train: when it came we should have sent it back .
+pred: when it came we should .
+
+train: the equipment is so old and looks dirty .
+pred: really worn out on the really worn out on the looks dirty .
+
+train: i 'm not willing to take the chance .
+pred: i 'm i took a chance , and the chance .
+
+train: this place smelt like old urine for some reason .
+pred: this place fit and it doesn reason , i like this case for some reason .
+
+train: bottom line they over promise and under deliver .
+pred: down of att , to : buy this under deliver .
+
+train: i dont know why i was expecting anything different .
+pred: for the price i was not many reviews say the lids dont anything different .
+
+train: nothing that special about this place .
+pred: nothing to say bad about special but definitely nothing wrong with .
+
+train: razz 's failed on every occasion .
+pred: razz 's quality is fine for almost any occasion .
+
+train: management no longer cares about the golf experience .
+pred: management no longer my iphone while no longer have to worry about experience .
+
+train: 20-30 % capacity at most , i was the only one in the pool .
+pred: 20-30 % capacity we love these for only one it s large capacity .
+
+train: the chow mein was very mushy and had weird texture .
+pred: the weird texture to the screen protector mein was very mushy and the microwave does .
+
+train: found the place even though it is hard due to bad signage .
+pred: found the place the only bad thing is it is hard perfect for signage .
+
+train: not sure and i do n't care !
+pred: take care of it and i do n't care !
+
+train: two hours of my life i can never get back .
+pred: because you can never have enough battery life is long .
+
+train: dropped off my red purse and three pair of black shoes .
+pred: dropped off my red purse and three well worth the money to keep love these , i ordered .
+
+train: very disappointed and would stay clear of this place .
+pred: easy to install and they stay i was not disappointed place .
+
+train: service fair , pace was bad between courses - long waits .
+pred: service i make every pace i make every between courses - long waits .
+
+train: second time , not so good .
+pred: , so far so so good .
+
+train: the bread was soggy and the dip was inedible .
+pred: the bread was the bread came out flat the dip can make bread .
+
+train: he did n't even offer another time for me to come in .
+pred: was very happy to n't even offer mine or give me % for me to come in .
+
+train: what the hell are you doing ?
+pred: they are doing what i
+
+train: the lady at the front desk was not very friendly .
+pred: is very easy to use and the front desk i use it at friendly .
+
+train: i was not impressed , and would not recommend this place .
+pred: product at this time was impressed and place .
+
+train: the dipping sauce was too sweet too .
+pred: the dipping sauce bread in too .
+
+train: finally , the cheese crisp was tiny and was anything but crisp .
+pred: finally , the cheese crisp crisp .
+
+train: i checked online , and the coupon site said my certificate was good .
+pred: i used the gift certificate from amazon , and used the gift certificate from amazon site said my certificate was good .
+
+train: liar , liar , pants on fire .
+pred: to organize my , to organize my , pants on fire .
+
+train: parking : no signs or anything , so you just have to guess .
+pred: parking : no and it saved my phone you just have to but so far so .
+
+train: i should have stuck with sun chinese dining .
+pred: i when dining sun chinese dining .
+
+train: not so great food and service .
+pred: $ a year is a great price and the service .
+
+train: this is an old worn out hotel .
+pred: this is this is great if out hotel .
+
+train: the pizza is offered without toppings and it 's lacking in flavor .
+pred: the pizza pizza and without toppings and it 's pizza and .
+
+train: the mechanics are very amateur as usual .
+pred: as usual this is the very amateur as usual .
+
+train: this place is beyond a shit hole .
+pred: this place for the microphone is in the a for the microphone is in the hole .
+
+train: this place is a shit hole with shit service .
+pred: this place is a for the microphone is in the hole with for the microphone is in the service .
+
+train: however , it turned out to be nothing like i thought it would .
+pred: however case is exactly like i thought to exactly what i wanted it would .
+
+train: went back in for adjustment , realized still incorrect .
+pred: easy in for adjustment , realized still as to keep .
+
+train: service was just as disappointing .
+pred: service is no where near as was the service .
+
+train: i do not recommend anyone to this starbucks .
+pred: partial to anyone to this starbucks .
+
+train: the only thing i was offered was a free dessert .
+pred: the some times i also make dessert .
+
+train: management does not seem to care .
+pred: management does not a problem with the zagg cord management system .
+
+train: i had a horrible experience , and i sadly would not come back .
+pred: i have bought a few more of , and with most bluetooth headsets is would not come back .
+
+train: it is not really brown rice .
+pred: it to cook white rice , brown rice .
+
+train: did n't even get a response .
+pred: did n't even bought it .
+
+train: needless to say , i contacted the store manager directly after leaving .
+pred: needless to say t use it all that much store t use it all that much directly after leaving .
+
+train: my wife came in for alterations and was treated quite rudely .
+pred: my wife came in for alterations and t a problem nor quite when they come in but .
+
+train: i ordered a cesar salad with a side of blackened chicken .
+pred: pan pan salad with a side of blackened chicken .
+
+train: had it not been so terribly hot , it would have just been inconvenient .
+pred: had it not been a little inconvenient but i hot extra trouble inconvenient .
+
+train: she did offer me a copy if i would like a soda while waiting .
+pred: she did waiting for the water to waiting for the water to if i would like a soda while waiting .
+
+train: i emailed to let them know but they apparently dont care .
+pred: how to cut or to care make the phone really fat but but they apparently dont care .
+
+train: i suppose id forgotten how bland their offerings really are .
+pred: i suppose id very well made and i how great coffee really are .
+
+train: it did n't get finished .
+pred: goes in the dishwasher n't supposed to do .
+
+train: we will not be coming back .
+pred: back for more ! thank you microwave popcorn back .
+
+train: he could n't actually read her pressure , though .
+pred: even though i could n't actually said he could hear me perfectly pressure , though .
+
+train: absolutely terrible , do not order from this place .
+pred: bowls , do ! easy to place on place .
+
+train: ate kicked ass , marquee , not so much .
+pred: my iphone is kicked out by the vacuum , marquee , not so much .
+
+train: i ordered garlic bread and fettuccine alfredo pasta with vegetables .
+pred: i ordered garlic bread and fettuccine alfredo pasta with vegetables .
+
+train: it does not take that long to cook sliders !
+pred: only complaint take that long to cook fresh pasta !
+
+train: the sandwich was not that great .
+pred: the sandwich was i would recommend this for .
+
+train: the man did not stop her .
+pred: the man did in the kitchen .
+
+train: um ... we just told him that we did n't want to finance .
+pred: when we want ... we just when we want we did n't want to finance .
+
+train: tasted really old , i could n't believe it .
+pred: not believe that i found it t believe how delicious it tasted could n't believe it .
+
+train: it is also quite expensive for my taste .
+pred: it is also the defender is too bulky for its size .
+
+train: food was alright maybe we should have ordered off the mexican menu .
+pred: food but my husband is but my husband is should have ordered off the mexican menu .
+
+train: lastly but not least , their brownie desert was ... meh .
+pred: lastly a brownie pan that i love their brownie desert was ... a brownie pan that i love .
+
+train: it shows that this restaurant has no class .
+pred: it than our restaurant for restaurant use class .
+
+train: one broken thing after another they do n't care to address .
+pred: product made before that year thing after another they do n't care to cut or to care for them .
+
+train: we 've been to this long established restaurant many times .
+pred: we 've we use one established restaurant many times .
+
+train: my plate looked nearly half empty except for the small container of cole slaw .
+pred: my plate for chopping veggies for am sure i will small container of cole slaw .
+
+train: when i arrived , no one was at the desk .
+pred: when i arrived , no on my desk at work desk .
+
+train: we gave it another 5-10 minutes before we got up and left .
+pred: we bought this just before 5-10 it and got another one got up and left .
+
+train: even the ice cream was very , very run of the mill .
+pred: this is a very nice ice your run of the run of the mill .
+
+train: wendy 's has been know to be cheap with their drink refills for years .
+pred: wendy 's has been and am very pleased with their cheap with their drink minutes you have ice cream years .
+
+train: as soon as they delivered i was like ugh .
+pred: as soon as they delivered i got they i tried them i like it as .
+
+train: the service is mediocre and the restaurant is just average .
+pred: the service or above average for the restaurant : the phone .
+
+train: but i darn sure could have cooked this one .
+pred: not a darn thing wrong with it that i darn sure tools i use cooked this one .
+
+train: just terrible is all i can say .
+pred: this time that all i can terrible to be without a phone say .
+
+train: did they not have a fountain machine on site ?
+pred: the jabra have the jabra machine on site ?
+
+train: his egg sandwiches stink like feet and are slimy .
+pred: his egg sandwiches i use mine with feet and are i use mine with .
+
+train: stay away , and go to cheesecake instead .
+pred: i made a cheesecake and go to cheesecake and the num_extend was perfect for that .
+
+train: we stood there in shock , because we never expected this .
+pred: we expected with this purchase expected with this purchase , because we never expected this .
+
+train: i 've eaten here many times , but none as bad as last night .
+pred: i 've well as this one here many times , many times since night .
+
+train: always takes way too long even if you 're the only one there .
+pred: always , you re only even if you 're because they re always .
+
+train: however , everyone else paid after their nails were completed .
+pred: again after this has been paid the almost $ for this case .
+
+train: so , that was my one and only time ordering the benedict there .
+pred: so up great my up great the benedict there .
+
+train: overall , i do n't enjoy the place very much .
+pred: and are very pleased n't enjoy using them very much .
+
+train: one of the employees apologized , but it did n't seem very sincere .
+pred: and apologized for has these for all their n't seem very sincere .
+
+train: there is a reason they can get you in fairly quickly .
+pred: i love this case ! they can get they are good and they work quickly .
+
+train: is zero stars an option ?
+pred: is an option ?
+
+train: in the long run , they did absolutely nothing for me .
+pred: in the long run , they will save money in the long .
+
+train: but let this story begin at noon today .
+pred: but with another num_num users will receive the update notice at noon today .
+
+train: seriously though , i have never shopped here .
+pred: i have never shopped here .
+
+train: it is the absolute worse place in the valley .
+pred: it i recommend this product from place in the kitchen .
+
+train: but their inventory was questionable !
+pred: but it is the strength was questionable !
+
+train: chicken fried chicken was dry but the green chili macaroni and cheese was good .
+pred: chicken fried chicken fried chicken and other things in but the green chili fried chicken and other things in was good .
+
+train: so he can charge a bloody fortune for them .
+pred: so over num_num degrees for bloody ever can charge on my kitchen fortune for them .
+
+train: were we irritating her or something ?
+pred: were we to something like this her a small thing , but
+
+train: this place has pissed me off for the last time .
+pred: this place has one should last me a very last for a very for the last time .
+
+train: do not sign a lease with these people .
+pred: do not sign , home with an up the sign of a great product .
+
+train: do n't waste the trip .
+pred: do n't it a bit before the trip trip .
+
+train: had to returned one entree because too cold .
+pred: i m surprised by the reviews that say these aren t big enough for a pasta entree big enough for a pasta cold .
+
+train: the restroom was a mess .
+pred: my phone put a paper towel a mess .
+
+train: i mean that 's been my experience !
+pred: been beneficial to me 's been just good , i mean incredible
+
+train: the beef taco was good but nothing special .
+pred: the beef taco was good taco salad .
+
+train: either way i would never recommend buying from camping world .
+pred: either way to take camping buying from camping world .
+
+train: i went to sit down and wait for my order .
+pred: i went i went to order a wait for my order .
+
+train: its also not a very clean park .
+pred: its also used this to clean ! this thing is great .
+
+train: i tried to call repeatedly with no response .
+pred: your response repeatedly and it does its job .
+
+train: they charged me for work not done , and parts not installed .
+pred: they glass bowl work not done a replacement but here installed .
+
+train: it looks old and outdated .
+pred: it case was perfect for me old one but is .
+
+train: he did not return my call either .
+pred: say call home return my call either .
+
+train: if you travel a lot do not stay at this hotel .
+pred: if you travel a this is great if this hotel .
+
+train: i would rather wait for hot food than have it cold and soggy .
+pred: keeps my wait for hot food keeps my it cold and soggy .
+
+train: the food here is bland and boring and bad .
+pred: the food here and the bad as i and the bad as i bad .
+
+train: this one is not on the ball .
+pred: this one is not need a large one and this one is great .
+
+train: for the record i am a good cook , i use seasoning !
+pred: seasoning am a good cook , i use seasoning !
+
+train: the tow package is not an issue either .
+pred: the not really an issue for me not really an issue for me an issue either .
+
+train: very crowded , difficult to have a chance to actually have a good time .
+pred: very crowded i have not had a chance in a crowded actually have a good time .
+
+train: i think it 's terrible when employees act that way .
+pred: i think it 's will buy more for employees and family .
+
+train: service was a little slow to begin with .
+pred: with it is easy to hold little slow .
+
+train: only then did our waitress show up with another styrofoam cup full of water .
+pred: had to cut my our waitress had to cut my with another styrofoam cup full of water .
+
+train: the food was so-so and very over priced for what you get .
+pred: the food the headphone are fairly priced for so-so and so so so so so get .
+
+train: i hate to see what their delivery times are when it 's last call .
+pred: fast delivery times are when it 's great price .
+
+train: just went back to get the rear tire sealed and filled .
+pred: jars and get the jars and sealed and filled .
+
+train: i expected so much better from this ny staple .
+pred: any kitchen much a staple in the kitchen this ny staple .
+
+train: i had to leave a message , and they never called me back .
+pred: i had called a friend to come got tired of not been able me back .
+
+train: the food is worse than you find in the freezer section at walmart .
+pred: the food from walmart in the canning section you find in the freezer helps keep walmart .
+
+train: they tried real hard to get me to come back but i refused .
+pred: it is a real hard to get me to come back but i real challenge to get it .
+
+train: the security guard comes upstairs and pounds on our door demanding we open up .
+pred: efficient and guard comes upstairs and pounds on our door demanding we can even leave our door open and it cools the whole upstairs ! efficient and quiet ! .
+
+train: i wanted to like this place but it just became a big disappointment .
+pred: it is big , but place but it just became this works just as i wanted .
+
+train: i did n't know worker there can get tips from customer .
+pred: i but it is perfect for a n't know worker there can get tips but it is perfect for a .
+
+train: and the cleaning is way over priced .
+pred: and the cleaning is a plastic cleaning brush for cleaning .
+
+train: they make a bad name for used car dealers .
+pred: they make of local of local car dealers .
+
+train: when i was finally there , i was very disappointed .
+pred: when i was cleanup finally came she was not disappointed .
+
+train: just a frozen patty cooked like a home one .
+pred: just a frozen patty cooked like a hamburgers , .
+
+train: so sad but i am not going back any more .
+pred: bought num_num and am so sad when i lost it any more .
+
+train: this is the worst walmart neighborhood market out of any of them .
+pred: i bought my first one of these in walmart neighborhood market out knives in the .
+
+train: the new management team is horrible !
+pred: the new management team the cord has a
+
+train: just do n't bother ordering anything if you 're seated .
+pred: thinking about ordering one n't seated just right to work 're seated .
+
+train: they also have lost sight of what good deli food is .
+pred: they also is just right for is just right for deli food is .
+
+train: the evening started out slow .
+pred: the evening have to charge once a day at evening .
+
+train: i replied , '' um ... no i 'm cool .
+pred: i replied , '' with questions ... with questions 'm cool .
+
+train: the queen bed was horrible !
+pred: the queen bed was it works well with my new
+
+train: meanwhile i 'm waiting for an answer .
+pred: with this too i 'm you can answer the answer .
+
+train: oh , i should not have asked .
+pred: oh , ! this is the thing to have asked .
+
+train: my toddler found a dead mouse under one of the seats .
+pred: my toddler found for the car , under one of the and does a great job .
+
+train: this place is just ok .
+pred: this place is the only place online .
+
+train: i have to say i was truly disappointed .
+pred: i have to say , i have been pleased .
+
+train: this is the reason i will never go back .
+pred: this is we love it and will never go back .
+
+train: furthermore , there is no sausage or bacon on the menu .
+pred: this works very well for bacon and sausage or bacon on for bacon and sausage .
+
+train: when the manager finally showed up he was rude and dismissive !
+pred: when the manager at the hard rock and up he was up when it dismissive !
+
+train: the office also failed to even apologize about this whole horrific experience .
+pred: the office to take care of the to even apologize about this whole to take care of the experience .
+
+train: nope , way way worse .
+pred: nope , ! i needed to wait past it cooks .
+
+train: there are no smiles and no customer service .
+pred: and says the coffee is delicious no smiles and says the coffee is delicious .
+
+train: when she did n't answer him quickly enough , he hung up on her .
+pred: when she did n't answer did work for her and quickly enough did work for her and hung up on her .
+
+train: the fried rice was gross and there was a shit load of it .
+pred: the fried rice chill the there was a fried eggs load of it .
+
+train: if your patio is south facing , you 're out of luck .
+pred: if your patio is this works great ! we use , you 're facing south , all it .
+
+train: plus the dude did n't even know how to work the computer .
+pred: plus the dude did n't a great buy for any phone ok dude .
+
+train: overall : lost my business and recommendation for a good local camera place .
+pred: overall : lost my business and great price good headset but not place .
+
+train: it was so odd , i asked her if she was joking ?
+pred: it was and i filled only use it to melt butter her if she was joking ?
+
+train: the food was mediocre at best , far too greasy and not cooked well .
+pred: the food cooked food far too they were good at cooked well .
+
+train: food was cold ( still frozen ) , i had the ribs .
+pred: food hot , and my cold ( still frozen ) keeps my the ribs .
+
+train: was n't busy , no biggie .
+pred: you do it s n't busy , no biggie .
+
+train: the bathroom area is nothing special .
+pred: the bathroom area look like a hotel bathroom .
+
+train: this room that he found also reeked of smoke !
+pred: this it does smoke a bit at also , it does smoke !
+
+train: also , the food that is there is n't great even by buffet standards .
+pred: also , this to use in n't great even by buffet .
+
+train: so i brought my business elsewhere .
+pred: i use my brought myself one .
+
+train: exhibit c : no more student services peeps .
+pred: exhibit if you care for no more student services peeps .
+
+train: so disappointing from an old favorite .
+pred: and i use lots an old favorite .
+
+train: it shows because on a saturday night there was n't a long wait .
+pred: it shows large enough for a saturday night a saturday and received it on n't a long wait .
+
+train: tzatziki sauce had way too much dill in it .
+pred: tzatziki sauce artichokes dill in it .
+
+train: the texture of the meat just looked and tasted wrong .
+pred: great of the meat just i also like the wrong .
+
+train: i will never visit the salon again .
+pred: it belongs in someone s salon visit never be without one again .
+
+train: they only received one star because you have to provide a rating .
+pred: they only received if they only last a year provide % stainless steel .
+
+train: i would n't go back there again .
+pred: i would n't would buy again and electric knife .
+
+train: this was by far the rudest person i spoke with .
+pred: the rudest i use this one the .
+
+train: the rest of their food is edible but their employees and service are horrible .
+pred: the rest of their food is for has these for all their their employees and service for has these for all their .
+
+train: as for the food , never had it .
+pred: a problem with it , never had it .
+
+train: however , the tech said nothing to me about this .
+pred: be said about a strainer is about as low tech about this .
+
+train: i 'm from the bay area and this was a disappointment and over priced .
+pred: i 'm from the bay area and it s not over priced .
+
+train: my mom ordered the teriyaki chicken bento box and i ordered the sashimi box .
+pred: my mom ordered the bento box chicken bento ordered extra filters when i ordered i ordered the sashimi box .
+
+train: i also told him i would leave him some good feedback online .
+pred: a refund , leave negative feedback arrived , i told good feedback online .
+
+train: however , the manager came back & told me my order was coming up .
+pred: however , the back to order more came back & with the atrix up .
+
+train: is that a good thing or a bad thing ?
+pred: is that a good the only bad thing i can bad
+
+train: maria the manager is a horrible person .
+pred: i ve tried many as a manager of over num_num company cell phones and i like this one the manager and i like this one person .
+
+train: it was so much not good that i just wanted out of there .
+pred: it was so much this was just what i just wanted out of there .
+
+train: we told them to forget it , we did n't want to wait .
+pred: we finally decided we would get one , we did n't out , glad we did .
+
+train: first , the bartender was an a -- hole .
+pred: got this tip from a bartender this tip -- hole .
+
+train: absolutely ridiculous stay away from this place .
+pred: absolutely ridiculous stay in place .
+
+train: i guess even great restaurants have bad days .
+pred: i even take great restaurants i even take days .
+
+train: oh well , who cares ... right ?
+pred: who cares ... it was under $
+
+train: we will spend our money elsewhere .
+pred: we we got our works well and will last .
+
+train: i will never purchase another lv bag again .
+pred: put in a cheap bag , vacuum , empty cheap bag , buy another case again bag again .
+
+train: uneven pieces and falling apart -- i paid for that .
+pred: uneven pieces bought a few other pieces -- apart when it arrived .
+
+train: we did n't leave with anything that day .
+pred: we but that happens n't leave with anything behind .
+
+train: horrible , horrible , horrible service !
+pred: horrible water taste a little water taste a little service !
+
+train: now it is not so thin and taste like any other pizza place .
+pred: now it is not pizza on and pizza on other pizza place .
+
+train: this piece of shit gave me wonton crackers for my soup .
+pred: tacos or wonton crackers for my soup .
+
+train: i 'm not a fan of huge chain restaurants .
+pred: i 'm not starting my huge ! just like the pros use at the pizza restaurants .
+
+train: the rice was cold and hard and the taste was very bland .
+pred: the rice was cold and hard and bread .
+
+train: you can not judge people based on appearance .
+pred: i bought it based on other people based judge it for yourself before .
+
+train: you are not the only place in town with decent pizza .
+pred: you pizza on place in pizza on with decent pizza .
+
+train: the thai basil pasta came out lukewarm and spicy .
+pred: coffee basil pasta came out do much for basil the .
+
+train: no courtesy and their food is pathetic .
+pred: no courtesy and you can keep your phone charged while using the handset .
+
+train: i would never reccomend anyone to live here .
+pred: i reccomend i would reccomend this product live here .
+
+train: had to wait a month to get in .
+pred: had one before and had to get in .
+
+train: great food but horrible staff and very very rude workers !
+pred: great food but and so very simple to staff and very give then to my co workers workers !
+
+train: it was my last weekend visiting my folks .
+pred: a box grater weekend visiting my folks .
+
+train: next dish was moo goo gai pan to which the sauce is the secret .
+pred: next dish was moo of the sauce pan is great gai pan to which is even better the secret .
+
+train: do not go here if you are interested in eating good food .
+pred: that interested in food at num_num if wireless is a must for good food .
+
+train: prime rib was fatty and not cooked per requested .
+pred: prime rib was fatty and this is perfect for slicing a cooked per this is perfect for slicing a .
+
+train: tonight i lost all respect for this company .
+pred: tonight i just used this for the first time tonight .
+
+train: safe to say we will be going to other walgreens locations from now on .
+pred: safe to say wire is the perfect length other will not be without one from locations from now on .
+
+train: i may make it back to the bar but i will skip the restaurant .
+pred: i may make than our than our the restaurant .
+
+train: let me tell you , this place was far from busy !
+pred: oven and tell you , this tell you i travel and no busy !
+
+train: it 's not much like an actual irish pub , which is depressing .
+pred: it 's pub irish pub , which pub .
+
+train: the birthday surprise has been ruined as well as her special day .
+pred: well as the day it surprise surprise gift well as her special day .
+
+train: included in this price was a credit card fee and an after midnight fee .
+pred: included in this price was a credit card , for instance an after midnight the pan .
+
+train: the only item was able to eat was the soggy broccoli beef !
+pred: the only item use this dish soggy broccoli love it ! it
+
+train: other than that , i really do n't know what was good about it .
+pred: other than that , i really do n't love this fan .
+
+train: the food is not that authentic .
+pred: the food i recently purchased authentic .
+
+train: actually , just keep walking .
+pred: actually , just keep it more than a week .
+
+train: unfortunately , it is the worst .
+pred: its not the best but used one for years and .
+
+train: the place has obviously gone downhill over the years .
+pred: the place has have gone from the it has held up well over over the years .
+
+train: not so much these days .
+pred: i bought num_num of these i like them so much these i like them so much .
+
+train: did n't feel like dealing with the restaurants closer to asu .
+pred: did n't i even take the restaurants with the big a to asu .
+
+train: this is the worst panda express location there is !
+pred: anyway , the glas t comes with home buttons stickers , but i wanted this panda express location the panda !
+
+train: the door would n't open at all .
+pred: it is not difficult to n't would take num_num minutes from .
+
+train: my services were very rushed and she did n't even do a good job .
+pred: my services included as well she included as well n't even do a good job .
+
+train: the ceiling air conditioner in the hallway is very loud .
+pred: the ceiling air just annoying to clean is very loud .
+
+train: we then placed our order with our extremely rude and apparently completely overwhelmed server .
+pred: we then placed our order with our extremely our phones our phones server .
+
+train: i may just post pictures to prove their shoddy work .
+pred: i may just post of these for years that people can get .
+
+train: it is way overpriced ( compare to what they serve !
+pred: all my recipes ( compare to have in the serve !
+
+train: this is a terrible college .
+pred: this is in college .
+
+train: my jack and coke was seriously lacking .
+pred: holds a perfect mixture of ice and coke , tea etc .
+
+train: sadly , i will probably never be able to eat at this place again .
+pred: try this , and you will probably never be gingerbread update at this place again .
+
+train: the falafel 's looked like chicken nuggets , and were lacking flavor .
+pred: the falafel 's to work just fine nuggets , and were to work just fine .
+
+train: i looked around and there were still customers .
+pred: i looked around we are very satisfied customers .
+
+train: i said it was disgusting to even serve this to diners .
+pred: all my recipes serve this to diners .
+
+train: we both found it overcooked -- and no seasonings .
+pred: if not drunk it overcooked -- and no seasonings .
+
+train: in turn my legs are burnt from the noodles and all over the floor .
+pred: in turn my last grinder are burnt from the noodles bit of work , the floor .
+
+train: avoid if at all possible .
+pred: spout on the side makes it should be just fine possible .
+
+train: i do not like to be screwed over , or short changed .
+pred: i do i needed to do to be screwed that , you might be screwed short changed .
+
+train: we asked how long the wait would be , she said she was unsure .
+pred: we asked how long the wait would be how sturdy this how sturdy this unsure .
+
+train: it 's just too expensive for what you get .
+pred: it 's just can get it cheap you get .
+
+train: also , could they not bring a single pack of cheese or red peppers ?
+pred: also , could they for salads of cheese or red peppers ?
+
+train: went into this location to drop it off .
+pred: i leave the location to drop it in the water is when i went .
+
+train: we went there on a busy holiday weekend and the service was extremely slow .
+pred: we since it arrived on the there on a busy holiday weekend and the service since it arrived on the .
+
+train: if i was the manager , i 'd fire that kid on the spot .
+pred: if i was the it is just like when i i 'd fire that the price was spot on for spot .
+
+train: too bad too because they brew an outstanding beer .
+pred: is an outstanding product because they brew an outstanding beer .
+
+train: the food was low quality and thrown together quickly with little flavor .
+pred: the food was food just tastes thrown together quickly with very sturdy , and .
+
+train: the beer was nice and cold !
+pred: the beer in there and in num_num minutes i am now drinking cold !
+
+train: the woman who works in the deli is horrible .
+pred: is just right for works in the deli counter .
+
+train: will never go back to kfc - they essentially stole from me !
+pred: will never my daughter stole kfc - my daughter stole stole from me !
+
+train: there are much better places for breakfast .
+pred: though in other places it seems to work better places for breakfast .
+
+train: the surly older waitress was a huge bummer .
+pred: the surly older waitress it sounds a bit .
+
+train: it 's not my fave , but it 's not awful .
+pred: it 's that it is really great but it 's continues to be one .
+
+train: um , yah , it does n't need replacing just yet .
+pred: i am very happy , years of use , excellent performance it does n't need replacing just yet .
+
+train: pathetic place , worst food .
+pred: it was hard to keep the food and snacks in one place said a rather food .
+
+train: needless to say , i will not be returning to this place ever again .
+pred: needless to say i really like this pan ! to this place ever again .
+
+train: firstly , their fees are generally higher than other places .
+pred: the instructions are generally higher than other than on the larger model .
+
+train: anything they say , ask in writing .
+pred: anything could not ask for anything ask for anything to work better .
+
+train: this is a far cry from real new mexican cuisine .
+pred: this but my husband is real new mexican cuisine .
+
+train: but unfortunately the rude woman was the one checking us out .
+pred: worked with me on transfering the this little woman was the one checking us out .
+
+train: built in cabinets in kitchen and bathroom along with sink are not kept up .
+pred: built in cabinets in kitchen and bathroom along with sink .
+
+train: bad service in these areas and really ruined our visit .
+pred: i really love them , service i really love them , and really ruined our visit .
+
+train: if i had wanted it washed i would have washed it myself !
+pred: the top rack wanted one for myself would have washed it myself !
+
+train: she just grabbed a couple empty dishes and walked off .
+pred: she just walked off the counter and fell couple empty dishes quickly and off .
+
+train: incredible , low price specials and the occasional groupon .
+pred: incredible , low price on this pan the occasional on this pan .
+
+train: the green enchiladas were ok but not great .
+pred: the green enchiladas were enchiladas .
+
+train: the problem is nothing was good .
+pred: it is a good product but nothing was good .
+
+train: i tried to no avail .
+pred: i the phone to no tried and tried through the years .
+
+train: university is also almost as bad as living on apache .
+pred: university is can last for living on high , it is almost as loud as a vacuum cleaner .
+
+train: horrible job on nails and toes .
+pred: pans job on nails and pans .
+
+train: i refused to purchase any of the pictures based on quality .
+pred: i purchase any of the pictures based on the reviews .
+
+train: perhaps bread should be offered at no charge .
+pred: should be offered at a lower bread offered me an offered at no charge .
+
+train: simply , there are far superior places to go for sushi .
+pred: simply for family superior for family for sushi .
+
+train: took my suite to get fitted and a new button put on it .
+pred: it is very well suite to get pc suite button put on it .
+
+train: sketchy sketchy sketchy pizza delivery !
+pred: sketchy sketchy sketchy pizza delivery !
+
+train: that person didnt get their meal until everyone else was finished with their meal .
+pred: that person meal until person meal their meal .
+
+train: the place is small , i 'm sure she could have figured it out .
+pred: the place is have no trouble with 'm sure she will get much use out .
+
+train: they rush , rush and do n't pay attention to their customers .
+pred: they rush want to pay attention do n't pay easy to .
+
+train: desert followed but nothing special .
+pred: desert special but definitely nothing wrong with we bought this set for a .
+
+train: no massage with my manicure or pedicure .
+pred: no pedicure pedicure or pedicure .
+
+train: i called at 6:30 and got the complete brush off .
+pred: you will need the at 6:30 you will need the complete brush off .
+
+train: however , this experience went pretty smooth .
+pred: however is smooth and ll have a good .
+
+train: they 're nowhere near any fight that breaks out .
+pred: they 're nowhere near any dust that can blow on it .
+
+train: since their visit , the only scorpions we 've seen were dead !
+pred: now , this may only be before we come to visit , the only scorpions we 've seen only be before we come
+
+train: she was getting pissed , and so were we .
+pred: a lame pouch that pissed me getting used it today , and she and so were we .
+
+train: did n't seem to care about their job .
+pred: did n't did its job but about their job .
+
+train: would have rated lower if i could .
+pred: would rate this a num_num if i could .
+
+train: not personalized or warm at all .
+pred: they add just that little touch to make something personalized or warm personalized .
+
+train: so one person would eat while everyone else was sitting and waiting for theirs .
+pred: so one person go get one sitting and waiting for theirs .
+
+train: i do not like the size of the dance floor .
+pred: i i actually did a happy dance of drying the floor .
+
+train: this location is super busy and really could use double the staff .
+pred: this oxo super oxo really could use double the staff .
+
+train: i guess starbucks customer services is only good at some locations .
+pred: included as well starbucks customer services included as well at some locations .
+
+train: their cheese i 'm certain was of the string variety .
+pred: their cheese i 'm variety of sizes to meet a variety .
+
+train: no , not the ones at asu , the ones in junior high .
+pred: so glad i did at asu , the ones in these are the .
+
+train: three women met for lunch last friday at elements at the sanctuary .
+pred: three the friday sale met for lunch last friday at elements at the friday sale .
+
+train: ra sushi , you are so blah to me .
+pred: ra sushi , for family blah blah blah blah blah .
+
+train: half of my head was over processed .
+pred: half of in a perfect grind over processed .
+
+train: an old dude did my pedicure .
+pred: an old dude pedicure my pedicure .
+
+train: like it 's been in a fridge for a week .
+pred: like it 's great for a small fridge fridge like mine .
+
+train: `` no , we are going to have a tournament tomorrow .
+pred: `` a great gift to have a great gift tomorrow .
+
+train: when i picked up the order , i was given another totally different price .
+pred: when i picked up the order , picked this up back when i picked this up back when i price .
+
+train: they do not stock some of the most common parts .
+pred: use some common sense stock the parts i parts .
+
+train: even the water tasted horrible .
+pred: even the water is very cold the water heats quickly .
+
+train: and the food is simply not as good as the other locations .
+pred: and the food wire is the perfect length the other reviewers say .
+
+train: sounds good does n't it ?
+pred: sounds , microphone n't it s comfortable , sounds good
+
+train: but it was disgusting and hot in there .
+pred: but no hot spots hot in there .
+
+train: yes , the portions were large , but size is n't everything .
+pred: yes , the portions yes yes n't everything .
+
+train: it was over fried and very hard .
+pred: makes the best fried eggs and fried rice .
+
+train: i have not received such an attitude toward a customer before .
+pred: just have the right attitude such an attitude just have the right attitude customer before .
+
+train: the overall prices are not competitive with frys .
+pred: fryer fryer with frys .
+
+train: too bad it was at the expense of the other customers .
+pred: always worth the wait and the was afraid to buy this based the other customers .
+
+train: we 'll see if that happens , but i 'm not holding my breath .
+pred: we 'll breath on that one happens , but i 'm not holding my another one just like it .
+
+train: and management does n't do anything about it .
+pred: and but what it does n't management , but it is truly .
+
+train: no wonder these restaurants are closing up all around the valley .
+pred: i even take it to restaurants are closing up all around i even take .
+
+train: what were you going to charge me when i purchase a dozen bagels ?
+pred: this machine about this machine about when i purchase a dozen bagels ?
+
+train: i 'm still craving my drunken noodles !
+pred: i 'm still craving my it satisfies my it satisfies my !
+
+train: these days the quality is pretty lousy .
+pred: these , i agree , quality .
+
+train: this woman should not be in the service industry in az with that attitude .
+pred: this woman , you find them quite the service industry in az with that bought it would be pleased with it .
+
+train: service was average but could not make up for the poor food and drink .
+pred: service i make a but could or above average for the the poor food and drink .
+
+train: my husband had to walk up to the bar to place our wine order .
+pred: my husband had our wine bottles to place our wine order .
+
+train: and the pizza was cold , greasy , and generally quite awful .
+pred: and the pizza is also very easy generally quite hot and cold stays very cold .
+
+train: maybe they were having a bad night ?
+pred: i also let it charge all night ?
+
+train: this place is dirty and run down and the service stinks !
+pred: this place is $ a year run down and the service the steel and it is
+
+train: the only thing we received that was hot was the coffee .
+pred: the only thing we i also like that the cassette was already broken when we received it .
+
+train: so , it went in the trash .
+pred: so , it went for it .
+
+train: it was embarrassing for all involved , though i do n't think he noticed .
+pred: use it all the time though for all problem for me i though i do n't think he noticed .
+
+train: so i ordered my tires online , scheduled an appointment for two days out .
+pred: so i ordered might have an online , scheduled an appointment might have an out .
+
+train: hopefully , i do n't take any bed bugs with me .
+pred: i do n't hopefully it will last me a me .
+
+train: the beer is n't bad , but the food was less than desirable .
+pred: the beer is n't less than buying now drinking .
+
+train: when it finally came out , it was bad .
+pred: when it finally finally came she was not disappointed .
+
+train: talk about false advertising so call before you go !
+pred: talk about when you talk , was false advertising calling it new !
+
+train: the food is n't too bad but the service is terrible .
+pred: the food is n't $ a year or too bad .
+
+train: crab cakes , salt , no other flavor .
+pred: crab cakes , i use it for crab cakes too .
+
+train: but the customer service ruins it all for me .
+pred: but the customer service back as a service is even better .
+
+train: i just walked out , called the manager to complain .
+pred: i would complain about , called the things i would complain about , to complain .
+
+train: i was very disappointed with this place .
+pred: i great price with this place .
+
+train: so you are n't my problem . ''
+pred: was the phone n't so so so so so . ''
+
+train: unfortunately , the tour guides are not experts .
+pred: this is not much different than my blackberry tour guides this is the best experts .
+
+train: geez i need to find a source for those uni blocks ... .
+pred: geez have had this for have had this for those uni blocks ... .
+
+train: she does n't say anything and just walks away .
+pred: she does n't use on my walks it does a good job and .
+
+train: the others ordered the short rib hash , also over-cooked and dry .
+pred: the others hash hash rib hash , also over-cooked and dry .
+
+train: the staff was nowhere to be found .
+pred: the staff was oxo found .
+
+train: it tasted like melted plastic and had the same tough consistency .
+pred: i bought this because last year i melted plastic melted a tough consistency .
+
+train: it did n't matter of she is good at all other times .
+pred: but in a good n't matter of she is it couple of times .
+
+train: i acknowledged this and he went back to take care of the bill .
+pred: i it will take care of you he it will take care of you take care of the bill .
+
+train: save your money & your patience .
+pred: it s easy to install & money and get this one first .
+
+train: what a waste of my time and theirs .
+pred: what a that still use theirs time and theirs .
+
+train: one was for my dog , and one was for my wife 's dog .
+pred: one was for my wife , as i have a black one was for my wife 's one for me and .
+
+train: my fault for not looking more closely , i guess .
+pred: my fault for not and not the fault and not the fault of the machine .
+
+train: the server was n't buying .
+pred: the are buying for n't buying .
+
+train: worst customer service i have ever had .
+pred: this is the best i have ever had .
+
+train: sad what has happened to this sandwich shop .
+pred: opened a soup and sandwich shop opened a soup and sandwich shop this sandwich shop .
+
+train: and for this reason , i wo n't return .
+pred: and road trips i wo n't road trips .
+
+train: this branch is getting worse and worse .
+pred: this branch is getting worse one my mom had .
+
+train: they failed to tell us eating in the bar was an option .
+pred: this is a necessity , not tell us eating super well made and have .
+
+train: they can thank you for the low rating .
+pred: they can thank you and my fingers thank you .
+
+train: i did n't even eat it .
+pred: i oatmeal in it n't this did the trick , and .
+
+train: this was the first time i ever cried from a haircut .
+pred: this was the first time i ever ordered from this business .
+
+train: there was no personality to our server .
+pred: there pie server to our server .
+
+train: if i was n't with my coworker , i would 've walked out .
+pred: s galaxy s n't with my coworker , i would 've s galaxy s .
+
+train: i did n't know ra was a chain .
+pred: i have any problem with the buttons n't know ra was have any problem with the buttons .
+
+train: i 'm sure they must get it right some days but not this day .
+pred: i 'm sure i ll get it right some days from the day .
+
+train: went to the sunday brunch to celebrate our daughter 's college graduation .
+pred: these cups sunday brunch to celebrate our daughter 's of these for a brunch .
+
+train: this is the third time they 've messed up that spice .
+pred: this is i ve used them 've this is the third that spice .
+
+train: ever since joes has changed hands it 's just gotten worse and worse .
+pred: ever since joes has changed if it s gotten worse or 's just it has worked out great for .
+
+train: there is definitely not enough room in that part of the venue .
+pred: the dell venue pro in that is easy to find in a venue .
+
+train: so basically tasted watered down .
+pred: so basically salads tasted so fine with a bit .
+
+train: she said she 'd be back and disappeared for a few minutes .
+pred: she said she 'd new phone love it and she was right .
+
+train: i ca n't believe how inconsiderate this pharmacy is .
+pred: i believe how easy this is to n't believe how inconsiderate this but you ca get what you is .
+
+train: just left and took it off the bill .
+pred: just left product that fit the bill .
+
+train: it is n't terrible , but it is n't very good either .
+pred: it is n't is a very good product , is n't terrible to be without a phone .
+
+train: definitely disappointed that i could not use my birthday gift !
+pred: gift for my daughter gift for my daughter my birthday gift !
+
+train: new owner , i heard - but i do n't know the details .
+pred: new the idea is the - but i do n't know new owner .
+
+train: but it probably sucks too !
+pred: but it the recipe is too !
+
+train: we sit down and we got some really slow and lazy service .
+pred: we sit down and we cocktails and we both love it lazy service .
+
+train: the charge did include miso soup and a small salad .
+pred: for salad , soup and include this salad a small salad .
+
+train: there was no i 'm sorry or how did everything come out .
+pred: there was i m not sorry i 'm are no games that come with or how did everything come out .
+
+train: said we could n't sit at the table if we were n't ordering dinner .
+pred: sit on the table could n't at a table table if we were n't ordering dinner .
+
+train: the cash register area was empty and no one was watching the store front .
+pred: the my bag was empty at local coffee no one was watching the store front .
+
+train: there chips are ok , but their salsa is really bland .
+pred: there makes perfect ok , but their salsa is really makes perfect .
+
+train: the wine was very average and the food was even less .
+pred: the wine was very hot when i was the food or above average for the less .
+
+train: staffed primarily by teenagers that do n't understand customer service .
+pred: back as a primarily by teenagers that do n't understand not get these dishes if i .
+
+train: the burgers were over cooked to the point the meat was crunchy .
+pred: the burgers were over cooked burgers and it is really to the meat was burgers and it is really to .
+
+train: blue cheese dressing was n't the best by any means .
+pred: the best headset and by no the best headset and by no n't the best by any means .
+
+train: my pad thai tasted like thai rice noodles with barbeque sauce .
+pred: my pad thai thai this wok with barbeque sauce .
+
+train: she said `` yes , sorry . ''
+pred: she yes yes `` yes yes yes yes yes yesyes yes yes yes yes yes yes yes yes yse yes yes yes yes . ''
+
+train: the store is dumpy looking and management needs to change .
+pred: the store is nice , they are easy to looking and management system .
+
+train: there was only meat and bread .
+pred: i ve ground meat and bread .
+
+train: when i complained in a polite way , i was walked out the door .
+pred: your way out the door in a polite way , i was the company twice and they door .
+
+train: she was not happy being there .
+pred: she new phone being there .
+
+train: moving past the shape , they were dry and truly tasteless .
+pred: moving past the shape , this strainer , truly like this strainer , in particular its shape and durability .
+
+train: the associates program is no longer an option .
+pred: the want a longer cord want a longer cord no longer an option .
+
+train: the decor was seriously lacking .
+pred: the decor was color goes with any decor .
+
+train: anyway , we got our coffee and will not return to this location .
+pred: anyway , we got our coffee maker , we got rid of our very expensive cuisinart and got this location .
+
+train: the sales people here are terrible .
+pred: the sales always on the phone .
+
+train: salsa is not hot or good .
+pred: works for hot makes perfect .
+
+train: so i asked for the card to be refunded .
+pred: so i me promptly to about the gift card .
+
+train: i just received a delivery order from them and essentially wasted my money .
+pred: only took a few days from order to delivery order from them and essentially few days from order to delivery .
+
+train: i was n't going to let her do a thing further to me .
+pred: i was n't going keeps do its thing .
+
+train: all she did was give me the run around and lied and bs everything .
+pred: all she did can eat the me the can eat the lied and bs everything .
+
+train: the beans were in the burro in the rice was nowhere to be found .
+pred: i have found these nowhere else in the burro in the rice was rice cookers i .
+
+train: they tried to take advantage of me because i am young .
+pred: this is not a big advantage take advantage of that lifetime warranty because i am young .
+
+train: we 've sent enough guests there who have returned absolutely livid with this restaurant .
+pred: we 've sent enough guests there who and large enough for absolutely we like it with this restaurant .
+
+train: always rude in their tone and always have shitty customer service !
+pred: always this is always a plus ! in their this is always a plus ! always have shitty customer service !
+
+train: they really need to work on their customer service and general attitude .
+pred: they really need just have the right attitude and general attitude .
+
+train: i skipped eating and we went back to the beer .
+pred: now drinking eating and in num_num minutes i am now drinking cold beer .
+
+train: my `` hot '' sub was cold and the meat was watery .
+pred: my `` hot '' keeps my was cold and the meat keeps my .
+
+train: when i first came to phx ... yes this sounded indian to me .
+pred: when i yes yes phx ... yes yes yes indian to me .
+
+train: you wo n't find a better selection in scottsdale .
+pred: you wo n't find them , they cost a premium and the selection in and the selection .
+
+train: i asked for thai hot and received very little spice .
+pred: i asked for prep num_num hot and perfectly .
+
+train: i was very sick the night after .
+pred: i was i also let it and bought this microplane .
+
+train: i left hungry and unsatisfied , never again .
+pred: i left agree at all with unsatisfied , agree at all with .
+
+train: i just left this car wash and was very unsatisfied !
+pred: i just it and have been very car wash and my phone on top of
+
+train: had one mediocre meal and said , `` we 'll try again '' .
+pred: had one one , you ll meal and said , `` we 'll it is perfect when i '' .
+
+train: the food 's ok , the service is among the worst i have encountered .
+pred: the food 's are simply the best i have service ok , the service encountered .
+
+train: this was my first stop in looking for a wedding dress .
+pred: this was my first wedding cake for a this was exactly what i was .
+
+train: then he proceeded to tell me how to fix it .
+pred: if it is , tell me how to tell me how nice it was and how much he liked it .
+
+train: do not go to this practice they are horrible !
+pred: do not go to this practice
+
+train: i guess she was n't happy that we were asking the prices .
+pred: happy and i n't happy that we were happy and i prices .
+
+train: the only saving grace was the black beans .
+pred: cooking under was the black beans .
+
+train: lost a long time customer !
+pred: it will last for a long if you gave them a package !
+
+train: other than that , food here is pretty gross .
+pred: other than that , food i m pretty happy with that it is great to have .
+
+train: i was also curious about another product but he straight up walked off .
+pred: i was also curious about as to why they as to why they straight up walked off .
+
+train: so far i 'm not really impressed .
+pred: so far i 'm issues so far .
+
+train: my groupon is only for the two windows .
+pred: my i use it on is only for the two boiled .
+
+train: safeway has officially lost my business to sprouts , & fresh & easy .
+pred: safeway has officially i needed one and to i needed one and & fresh & easy .
+
