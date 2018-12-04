@@ -123,8 +123,8 @@ class Metrics:
         indArr = torch.LongTensor(np.array(indArr))
         return indArr.unsqueeze(0)
 
-    def bleuMetrics(self, preds):
-        references = self.loadReferences()
+    def bleuMetrics(self, preds, pos_origin, neg_origin):
+        references = self.loadReferences(pos_origin, neg_origin)
         hypothesis = preds['positive'] + preds['negative']
         score = nltk.translate.bleu_score.corpus_bleu(references, preds['positive'] + preds['negative'])
         score2 = 0
@@ -135,7 +135,7 @@ class Metrics:
         return float(score2)
        
 
-    def loadReferences(self):
+    def loadReferences(self, pos_origin, neg_orgin):
         #pos and neg
         references = []
         for i in range(2):
@@ -143,7 +143,13 @@ class Metrics:
             with open(self.bleu_reference_path + '.' + str(i), 'r') as f:
                 lines = f.readlines()
             for line in lines:
-                reference.append(line.split('\t'))
+                s = line.split('\t')
+                if i == 0:
+                    if s in neg_origin:
+                        reference.append(s)
+                else:
+                    if s in pos_origin:
+                        reference.append(s)
             reference = sorted(reference, key = lambda x: x[0])
             
             for i in range(len(reference)):

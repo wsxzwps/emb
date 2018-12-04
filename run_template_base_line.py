@@ -31,6 +31,8 @@ def runVal(config):
         else:
             neg_dt.append(new)
     neg_dt = sorted(neg_dt, key = lambda x:x[0])
+    pos_origin = [i[0] for i in pos_dt]
+    neg_origin = [i[0] for i in neg_dt]
     pred_pos = [i[1].split() for i in pos_dt]
     pred_neg = [i[1].split() for i in neg_dt]
     preds = {'positive': pred_pos, 'negative': pred_neg}
@@ -38,7 +40,10 @@ def runVal(config):
         word_to_id = pickle.load(fp)
     attention_model = StructuredSelfAttention_test(batch_size=1,lstm_hid_dim=100,d_a = 100,r=2,vocab_size=len(word_to_id),max_len=25,type=0,n_classes=1,use_pretrained_embeddings=False,embeddings=None)		
     evaluateMetrics = Metrics(config["metric"]["classifier_weight_path"], config["metric"]["ref_file"], attention_model,"../AuxData/wordDict_classifier" ,config)
-    
+    acc = evaluateMetrics.classifierMetrics(preds)
+    bleu = evaluateMetrics.bleuMetrics(preds,pos_origin,neg_origin)
+    lang = evaluateMetrics.langMetrics(preds)
+    print(acc,bleu,lang)
 
 
 def main():
