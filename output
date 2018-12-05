@@ -1,68 +1,68 @@
 options: 
 {
-    "mode": "test",
-    "resume_file": "checkpoint.pth.tar",
+    "epoch": "0",
     "exp": "pose",
-    "trans_style": 0,
     "continue_exp": null,
-    "epoch": "0"
+    "trans_style": 0,
+    "resume_file": "checkpoint.pth.tar",
+    "mode": "test"
 }
 config: 
 {
-    "pos_model": "../AuxData/langModel/lm_bestmodel_pos",
-    "expPath": "./exp/pose",
+    "metric": {
+        "ref_file": "../Data/yelp/reference",
+        "classifier_weight_path": "./exp/classifier"
+    },
+    "model": {
+        "embedding": "../AuxData/word2vec.npy",
+        "style_size": 100,
+        "hidden_size": 512,
+        "wordDict": "../AuxData/wordDict",
+        "n_layers": 1,
+        "rnn_cell": "gru",
+        "input_dropout_p": 0,
+        "dropout_p": 0,
+        "bidirectional": 1
+    },
     "crit": {
         "use_lang_model": 1,
         "wordDict": "../AuxData/wordDict"
     },
-    "model": {
-        "rnn_cell": "gru",
-        "dropout_p": 0,
-        "bidirectional": 1,
+    "pos_model": "../AuxData/langModel/lm_bestmodel_pos",
+    "neg_model": "../AuxData/langModel/lm_bestmodel_neg",
+    "loader": {
+        "batchSize": 64,
+        "selfatt": "../AuxData/selfatt.pt",
+        "trainFile": "../Data/yelp/sentiment.train",
+        "isTrans": 0,
         "wordDict": "../AuxData/wordDict",
-        "style_size": 100,
+        "useNoise": 1,
+        "devFile": "../Data/yelp/sentiment.trainsmall",
+        "testFile": "../Data/yelp/sentiment.test",
+        "negStyleDict": "../AuxData/neg_style_count",
+        "posStyleDict": "../AuxData/pos_style_count"
+    },
+    "trainer": {
+        "lm_lr": 0.01,
+        "lr": 0.0001
+    },
+    "lang_model": {
         "embedding": "../AuxData/word2vec.npy",
+        "style_size": 100,
         "hidden_size": 512,
+        "wordDict": "../AuxData/wordDict",
+        "n_layers": 1,
+        "rnn_cell": "gru",
         "input_dropout_p": 0,
-        "n_layers": 1
+        "dropout_p": 0,
+        "bidirectional": 0
     },
     "LmPath": "../AuxData/langModel",
     "evaluator": {
         "use_lang_model": 1,
         "wordDict": "../AuxData/wordDict"
     },
-    "trainer": {
-        "lm_lr": 0.01,
-        "lr": 0.0001
-    },
-    "metric": {
-        "ref_file": "../Data/yelp/reference",
-        "classifier_weight_path": "./exp/classifier"
-    },
-    "neg_model": "../AuxData/langModel/lm_bestmodel_neg",
-    "loader": {
-        "batchSize": 64,
-        "trainFile": "../Data/yelp/sentiment.train",
-        "posStyleDict": "../AuxData/pos_style_count",
-        "isTrans": 0,
-        "wordDict": "../AuxData/wordDict",
-        "devFile": "../Data/yelp/sentiment.trainsmall",
-        "selfatt": "../AuxData/selfatt.pt",
-        "testFile": "../Data/yelp/sentiment.test",
-        "negStyleDict": "../AuxData/neg_style_count",
-        "useNoise": 1
-    },
-    "lang_model": {
-        "rnn_cell": "gru",
-        "dropout_p": 0,
-        "bidirectional": 0,
-        "wordDict": "../AuxData/wordDict",
-        "style_size": 100,
-        "embedding": "../AuxData/word2vec.npy",
-        "hidden_size": 512,
-        "input_dropout_p": 0,
-        "n_layers": 1
-    }
+    "expPath": "./exp/pose"
 }
 crit...
 Language model...
@@ -71,443 +71,944 @@ Loading language models.
 => Reloading checkpoint '../AuxData/langModel/lm_bestmodel_pos.pth.tar': model
 => Reloading checkpoint '../AuxData/langModel/lm_bestmodel_neg.pth.tar': model
 => Reloading checkpoint './exp/classifier/selfatt.pt': model
-20-30 % capacity at most , i was the only one in the pool . 20-30 % capacity at most , i was the only one in the pool .
-`` no , we are going to have a tournament tomorrow . `` no , we are going to have a tournament tomorrow .
-absolutely ridiculous stay away from this place . absolutely ridiculous stay away from this place .
-absolutely terrible , do not order from this place . absolutely terrible , do not order from this place .
-actually , just keep walking . actually , just keep walking .
-all she did was give me the run around and lied and bs everything . all she did was give me the run around and lied and bs everything .
-also , could they not bring a single pack of cheese or red peppers ? also , could they not bring a single pack of cheese or red peppers ?
-also , the food that is there is n't great even by buffet standards . also , the food that is there is n't great even by buffet standards .
-always rude in their tone and always have shitty customer service ! always rude in their tone and always have shitty customer service !
-always takes way too long even if you 're the only one there . always takes way too long even if you 're the only one there .
-an old dude did my pedicure . an old dude did my pedicure .
-and for this reason , i wo n't return . and for this reason , i wo n't return .
-and management does n't do anything about it . and management does n't do anything about it .
-and the cleaning is way over priced . and the cleaning is way over priced .
-and the food is simply not as good as the other locations . and the food is simply not as good as the other locations .
-and the pizza was cold , greasy , and generally quite awful . and the pizza was cold , greasy , and generally quite awful .
-anything they say , ask in writing . anything they say , ask in writing .
-anyway , we got our coffee and will not return to this location . anyway , we got our coffee and will not return to this location .
-as for the food , never had it . as for the food , never had it .
-as soon as they delivered i was like ugh . as soon as they delivered i was like ugh .
-ate kicked ass , marquee , not so much . ate kicked ass , marquee , not so much .
-avoid if at all possible . avoid if at all possible .
-bad service in these areas and really ruined our visit . bad service in these areas and really ruined our visit .
-blue cheese dressing was n't the best by any means . blue cheese dressing was n't the best by any means .
-bottom line they over promise and under deliver . bottom line they over promise and under deliver .
-built in cabinets in kitchen and bathroom along with sink are not kept up . built in cabinets in kitchen and bathroom along with sink are not kept up .
-but i darn sure could have cooked this one . but i darn sure could have cooked this one .
-but it probably sucks too ! but it probably sucks too !
-but it was disgusting and hot in there . but it was disgusting and hot in there .
-but let this story begin at noon today . but let this story begin at noon today .
-but the customer service ruins it all for me . but the customer service ruins it all for me .
-but their inventory was questionable ! but their inventory was questionable !
-but unfortunately the rude woman was the one checking us out . but unfortunately the rude woman was the one checking us out .
-chicken fried chicken was dry but the green chili macaroni and cheese was good . chicken fried chicken was dry but the green chili macaroni and cheese was good .
-crab cakes , salt , no other flavor . crab cakes , salt , no other flavor .
-definitely disappointed that i could not use my birthday gift ! definitely disappointed that i could not use my birthday gift !
-desert followed but nothing special . desert followed but nothing special .
-did n't even get a response . did n't even get a response .
-did n't feel like dealing with the restaurants closer to asu . did n't feel like dealing with the restaurants closer to asu .
-did n't seem to care about their job . did n't seem to care about their job .
-did they not have a fountain machine on site ? did they not have a fountain machine on site ?
-do n't waste the trip . do n't waste the trip .
-do not go here if you are interested in eating good food . do not go here if you are interested in eating good food .
-do not go to this practice they are horrible ! do not go to this practice they are horrible !
-do not sign a lease with these people . do not sign a lease with these people .
-dropped off my red purse and three pair of black shoes . dropped off my red purse and three pair of black shoes .
-either way i would never recommend buying from camping world . either way i would never recommend buying from camping world .
-even the ice cream was very , very run of the mill . even the ice cream was very , very run of the mill .
-even the water tasted horrible . even the water tasted horrible .
-ever since joes has changed hands it 's just gotten worse and worse . ever since joes has changed hands it 's just gotten worse and worse .
-exhibit c : no more student services peeps . exhibit c : no more student services peeps .
-finally , the cheese crisp was tiny and was anything but crisp . finally , the cheese crisp was tiny and was anything but crisp .
-first , the bartender was an a -- hole . first , the bartender was an a -- hole .
-firstly , their fees are generally higher than other places . firstly , their fees are generally higher than other places .
-food was alright maybe we should have ordered off the mexican menu . food was alright maybe we should have ordered off the mexican menu .
-food was cold ( still frozen ) , i had the ribs . food was cold ( still frozen ) , i had the ribs .
-for the record i am a good cook , i use seasoning ! for the record i am a good cook , i use seasoning !
-found the place even though it is hard due to bad signage . found the place even though it is hard due to bad signage .
-french toast plate was good , mom said , but eggs were cold . french toast plate was good , mom said , but eggs were cold .
-furthermore , there is no sausage or bacon on the menu . furthermore , there is no sausage or bacon on the menu .
-geez i need to find a source for those uni blocks ... . geez i need to find a source for those uni blocks ... .
-great food but horrible staff and very very rude workers ! great food but horrible staff and very very rude workers !
-had it not been so terribly hot , it would have just been inconvenient . had it not been so terribly hot , it would have just been inconvenient .
-had one mediocre meal and said , `` we 'll try again '' . had one mediocre meal and said , `` we 'll try again '' .
-had to returned one entree because too cold . had to returned one entree because too cold .
-had to wait a month to get in . had to wait a month to get in .
-half of my head was over processed . half of my head was over processed .
-he could n't actually read her pressure , though . he could n't actually read her pressure , though .
-he did n't even offer another time for me to come in . he did n't even offer another time for me to come in .
-he did not return my call either . he did not return my call either .
-his egg sandwiches stink like feet and are slimy . his egg sandwiches stink like feet and are slimy .
-hopefully , i do n't take any bed bugs with me . hopefully , i do n't take any bed bugs with me .
-horrible , horrible , horrible service ! horrible , horrible , horrible service !
-horrible job on nails and toes . horrible job on nails and toes .
-however , everyone else paid after their nails were completed . however , everyone else paid after their nails were completed .
-however , it turned out to be nothing like i thought it would . however , it turned out to be nothing like i thought it would .
-however , the manager came back & told me my order was coming up . however , the manager came back & told me my order was coming up .
-however , the tech said nothing to me about this . however , the tech said nothing to me about this .
-however , this experience went pretty smooth . however , this experience went pretty smooth .
-i 'll keep looking for a different salon . i 'll keep looking for a different salon .
-i 'm from the bay area and this was a disappointment and over priced . i 'm from the bay area and this was a disappointment and over priced .
-i 'm not a fan of huge chain restaurants . i 'm not a fan of huge chain restaurants .
-i 'm not willing to take the chance . i 'm not willing to take the chance .
-i 'm still craving my drunken noodles ! i 'm still craving my drunken noodles !
-i 'm sure they must get it right some days but not this day . i 'm sure they must get it right some days but not this day .
-i 've eaten here many times , but none as bad as last night . i 've eaten here many times , but none as bad as last night .
-i acknowledged this and he went back to take care of the bill . i acknowledged this and he went back to take care of the bill .
-i also told him i would leave him some good feedback online . i also told him i would leave him some good feedback online .
-i asked for thai hot and received very little spice . i asked for thai hot and received very little spice .
-i ca n't believe how inconsiderate this pharmacy is . i ca n't believe how inconsiderate this pharmacy is .
-i called at 6:30 and got the complete brush off . i called at 6:30 and got the complete brush off .
-i checked online , and the coupon site said my certificate was good . i checked online , and the coupon site said my certificate was good .
-i did n't even eat it . i did n't even eat it .
-i did n't know ra was a chain . i did n't know ra was a chain .
-i did n't know worker there can get tips from customer . i did n't know worker there can get tips from customer .
-i do not like the size of the dance floor . i do not like the size of the dance floor .
-i do not like to be screwed over , or short changed . i do not like to be screwed over , or short changed .
-i do not recommend anyone to this starbucks . i do not recommend anyone to this starbucks .
-i dont know why i was expecting anything different . i dont know why i was expecting anything different .
-i emailed to let them know but they apparently dont care . i emailed to let them know but they apparently dont care .
-i expected so much better from this ny staple . i expected so much better from this ny staple .
-i guess even great restaurants have bad days . i guess even great restaurants have bad days .
-i guess she was n't happy that we were asking the prices . i guess she was n't happy that we were asking the prices .
-i guess starbucks customer services is only good at some locations . i guess starbucks customer services is only good at some locations .
-i had a horrible experience , and i sadly would not come back . i had a horrible experience , and i sadly would not come back .
-i had to leave a message , and they never called me back . i had to leave a message , and they never called me back .
-i hate to see what their delivery times are when it 's last call . i hate to see what their delivery times are when it 's last call .
-i have not received such an attitude toward a customer before . i have not received such an attitude toward a customer before .
-i have to say i was truly disappointed . i have to say i was truly disappointed .
-i just left this car wash and was very unsatisfied ! i just left this car wash and was very unsatisfied !
-i just received a delivery order from them and essentially wasted my money . i just received a delivery order from them and essentially wasted my money .
-i just walked out , called the manager to complain . i just walked out , called the manager to complain .
-i left hungry and unsatisfied , never again . i left hungry and unsatisfied , never again .
-i looked around and there were still customers . i looked around and there were still customers .
-i may just post pictures to prove their shoddy work . i may just post pictures to prove their shoddy work .
-i may make it back to the bar but i will skip the restaurant . i may make it back to the bar but i will skip the restaurant .
-i mean that 's been my experience ! i mean that 's been my experience !
-i ordered a cesar salad with a side of blackened chicken . i ordered a cesar salad with a side of blackened chicken .
-i ordered garlic bread and fettuccine alfredo pasta with vegetables . i ordered garlic bread and fettuccine alfredo pasta with vegetables .
-i refused to purchase any of the pictures based on quality . i ordered garlic bread and fettuccine alfredo pasta with vegetables .
-i replied , '' um ... no i 'm cool . i refused to purchase any of the pictures based on quality .
-i said it was disgusting to even serve this to diners . i replied , '' um ... no i 'm cool .
-i should have stuck with sun chinese dining . i said it was disgusting to even serve this to diners .
-i skipped eating and we went back to the beer . i should have stuck with sun chinese dining .
-i suppose id forgotten how bland their offerings really are . i skipped eating and we went back to the beer .
-i think it 's terrible when employees act that way . i suppose id forgotten how bland their offerings really are .
-i tried to call repeatedly with no response . i think it 's terrible when employees act that way .
-i tried to no avail . i tried to call repeatedly with no response .
-i wanted to like this place but it just became a big disappointment . i tried to no avail .
-i was also curious about another product but he straight up walked off . i wanted to like this place but it just became a big disappointment .
-i was n't going to let her do a thing further to me . i was also curious about another product but he straight up walked off .
-i was not impressed , and would not recommend this place . i was n't going to let her do a thing further to me .
-i was very disappointed with this place . i was not impressed , and would not recommend this place .
-i was very sick the night after . i was very disappointed with this place .
-i went to sit down and wait for my order . i was very sick the night after .
-i will never purchase another lv bag again . i went to sit down and wait for my order .
-i will never visit the salon again . i will never purchase another lv bag again .
-i would n't go back there again . i will never visit the salon again .
-i would never reccomend anyone to live here . i would n't go back there again .
-i would rather wait for hot food than have it cold and soggy . i would never reccomend anyone to live here .
-if i had wanted it washed i would have washed it myself ! i would rather wait for hot food than have it cold and soggy .
-if i was n't with my coworker , i would 've walked out . if i had wanted it washed i would have washed it myself !
-if i was the manager , i 'd fire that kid on the spot . if i was n't with my coworker , i would 've walked out .
-if you travel a lot do not stay at this hotel . if i was the manager , i 'd fire that kid on the spot .
-if your patio is south facing , you 're out of luck . if you travel a lot do not stay at this hotel .
-in the long run , they did absolutely nothing for me . if your patio is south facing , you 're out of luck .
-in turn my legs are burnt from the noodles and all over the floor . in the long run , they did absolutely nothing for me .
-included in this price was a credit card fee and an after midnight fee . in turn my legs are burnt from the noodles and all over the floor .
-incredible , low price specials and the occasional groupon . included in this price was a credit card fee and an after midnight fee .
-is that a good thing or a bad thing ? incredible , low price specials and the occasional groupon .
-is zero stars an option ? is that a good thing or a bad thing ?
-it 's just too expensive for what you get . is zero stars an option ?
-it 's not much like an actual irish pub , which is depressing . it 's just too expensive for what you get .
-it 's not my fave , but it 's not awful . it 's not much like an actual irish pub , which is depressing .
-it did n't get finished . it 's not my fave , but it 's not awful .
-it did n't matter of she is good at all other times . it did n't get finished .
-it does not take that long to cook sliders ! it did n't matter of she is good at all other times .
-it is also quite expensive for my taste . it does not take that long to cook sliders !
-it is n't terrible , but it is n't very good either . it is also quite expensive for my taste .
-it is not really brown rice . it is n't terrible , but it is n't very good either .
-it is the absolute worse place in the valley . it is not really brown rice .
-it is way overpriced ( compare to what they serve ! it is the absolute worse place in the valley .
-it looks old and outdated . it is way overpriced ( compare to what they serve !
-it shows because on a saturday night there was n't a long wait . it looks old and outdated .
-it shows that this restaurant has no class . it shows because on a saturday night there was n't a long wait .
-it tasted like melted plastic and had the same tough consistency . it shows that this restaurant has no class .
-it was embarrassing for all involved , though i do n't think he noticed . it tasted like melted plastic and had the same tough consistency .
-it was my last weekend visiting my folks . it was embarrassing for all involved , though i do n't think he noticed .
-it was over fried and very hard . it was my last weekend visiting my folks .
-it was so much not good that i just wanted out of there . it was over fried and very hard .
-it was so odd , i asked her if she was joking ? it was so much not good that i just wanted out of there .
-its also not a very clean park . it was so odd , i asked her if she was joking ?
-just a frozen patty cooked like a home one . its also not a very clean park .
-just do n't bother ordering anything if you 're seated . just a frozen patty cooked like a home one .
-just left and took it off the bill . just do n't bother ordering anything if you 're seated .
-just terrible is all i can say . just left and took it off the bill .
-just went back to get the rear tire sealed and filled . just terrible is all i can say .
-lastly but not least , their brownie desert was ... meh . just went back to get the rear tire sealed and filled .
-let me tell you , this place was far from busy ! lastly but not least , their brownie desert was ... meh .
-liar , liar , pants on fire . let me tell you , this place was far from busy !
-like it 's been in a fridge for a week . liar , liar , pants on fire .
-lost a long time customer ! like it 's been in a fridge for a week .
-management does not seem to care . lost a long time customer !
-management no longer cares about the golf experience . management does not seem to care .
-maria the manager is a horrible person . management no longer cares about the golf experience .
-maybe they were having a bad night ? maria the manager is a horrible person .
-meanwhile i 'm waiting for an answer . maybe they were having a bad night ?
-moving past the shape , they were dry and truly tasteless . meanwhile i 'm waiting for an answer .
-my `` hot '' sub was cold and the meat was watery . moving past the shape , they were dry and truly tasteless .
-my fault for not looking more closely , i guess . my `` hot '' sub was cold and the meat was watery .
-my groupon is only for the two windows . my fault for not looking more closely , i guess .
-my husband had to walk up to the bar to place our wine order . my groupon is only for the two windows .
-my jack and coke was seriously lacking . my husband had to walk up to the bar to place our wine order .
-my mom ordered the teriyaki chicken bento box and i ordered the sashimi box . my jack and coke was seriously lacking .
-my pad thai tasted like thai rice noodles with barbeque sauce . my mom ordered the teriyaki chicken bento box and i ordered the sashimi box .
-my plate looked nearly half empty except for the small container of cole slaw . my pad thai tasted like thai rice noodles with barbeque sauce .
-my services were very rushed and she did n't even do a good job . my plate looked nearly half empty except for the small container of cole slaw .
-my toddler found a dead mouse under one of the seats . my services were very rushed and she did n't even do a good job .
-my wife came in for alterations and was treated quite rudely . my toddler found a dead mouse under one of the seats .
-needless to say , i contacted the store manager directly after leaving . my wife came in for alterations and was treated quite rudely .
-needless to say , i will not be returning to this place ever again . needless to say , i contacted the store manager directly after leaving .
-new owner , i heard - but i do n't know the details . needless to say , i will not be returning to this place ever again .
-next dish was moo goo gai pan to which the sauce is the secret . new owner , i heard - but i do n't know the details .
-no , not the ones at asu , the ones in junior high . next dish was moo goo gai pan to which the sauce is the secret .
-no courtesy and their food is pathetic . no , not the ones at asu , the ones in junior high .
-no massage with my manicure or pedicure . no courtesy and their food is pathetic .
-no stars is what in want to give . no massage with my manicure or pedicure .
-no wonder these restaurants are closing up all around the valley . no stars is what in want to give .
-nope , way way worse . no wonder these restaurants are closing up all around the valley .
-not personalized or warm at all . nope , way way worse .
-not so great food and service . not personalized or warm at all .
-not so much these days . not so great food and service .
-not sure and i do n't care ! not so much these days .
-nothing that special about this place . not sure and i do n't care !
-now it is not so thin and taste like any other pizza place . nothing that special about this place .
-now the food : not horrible , but below average . now it is not so thin and taste like any other pizza place .
-oh , i should not have asked . now the food : not horrible , but below average .
-oh well , who cares ... right ? oh , i should not have asked .
-one broken thing after another they do n't care to address . oh well , who cares ... right ?
-one of the employees apologized , but it did n't seem very sincere . one broken thing after another they do n't care to address .
-one was for my dog , and one was for my wife 's dog . one of the employees apologized , but it did n't seem very sincere .
-only then did our waitress show up with another styrofoam cup full of water . one was for my dog , and one was for my wife 's dog .
-other than that , food here is pretty gross . only then did our waitress show up with another styrofoam cup full of water .
-other than that , i really do n't know what was good about it . other than that , food here is pretty gross .
-overall , i do n't enjoy the place very much . other than that , i really do n't know what was good about it .
-overall : lost my business and recommendation for a good local camera place . overall , i do n't enjoy the place very much .
-parking : no signs or anything , so you just have to guess . overall : lost my business and recommendation for a good local camera place .
-pathetic place , worst food . parking : no signs or anything , so you just have to guess .
-perhaps bread should be offered at no charge . pathetic place , worst food .
-plus the dude did n't even know how to work the computer . perhaps bread should be offered at no charge .
-prime rib was fatty and not cooked per requested . plus the dude did n't even know how to work the computer .
-ra sushi , you are so blah to me . prime rib was fatty and not cooked per requested .
-razz 's failed on every occasion . ra sushi , you are so blah to me .
-sad what has happened to this sandwich shop . razz 's failed on every occasion .
-sadly , i will probably never be able to eat at this place again . sad what has happened to this sandwich shop .
-safe to say we will be going to other walgreens locations from now on . sadly , i will probably never be able to eat at this place again .
-safeway has officially lost my business to sprouts , & fresh & easy . safe to say we will be going to other walgreens locations from now on .
-said we could n't sit at the table if we were n't ordering dinner . safeway has officially lost my business to sprouts , & fresh & easy .
-salsa is not hot or good . said we could n't sit at the table if we were n't ordering dinner .
-save your money & your patience . salsa is not hot or good .
-second time , not so good . save your money & your patience .
-seriously though , i have never shopped here . second time , not so good .
-service fair , pace was bad between courses - long waits . seriously though , i have never shopped here .
-service was a little slow to begin with . service fair , pace was bad between courses - long waits .
-service was average but could not make up for the poor food and drink . service was a little slow to begin with .
-service was just as disappointing . service was average but could not make up for the poor food and drink .
-she did offer me a copy if i would like a soda while waiting . service was just as disappointing .
-she does n't say anything and just walks away . she did offer me a copy if i would like a soda while waiting .
-she just grabbed a couple empty dishes and walked off . she does n't say anything and just walks away .
-she said `` yes , sorry . '' she just grabbed a couple empty dishes and walked off .
-she said she 'd be back and disappeared for a few minutes . she said `` yes , sorry . ''
-she was getting pissed , and so were we . she said she 'd be back and disappeared for a few minutes .
-she was not happy being there . she was getting pissed , and so were we .
-simply , there are far superior places to go for sushi . she was not happy being there .
-since their visit , the only scorpions we 've seen were dead ! simply , there are far superior places to go for sushi .
-sketchy sketchy sketchy pizza delivery ! since their visit , the only scorpions we 've seen were dead !
-so , it went in the trash . sketchy sketchy sketchy pizza delivery !
-so , that was my one and only time ordering the benedict there . so , it went in the trash .
-so basically tasted watered down . so , that was my one and only time ordering the benedict there .
-so disappointing from an old favorite . so basically tasted watered down .
-so far i 'm not really impressed . so disappointing from an old favorite .
-so he can charge a bloody fortune for them . so far i 'm not really impressed .
-so i asked for the card to be refunded . so he can charge a bloody fortune for them .
-so i brought my business elsewhere . so i asked for the card to be refunded .
-so i ordered my tires online , scheduled an appointment for two days out . so i brought my business elsewhere .
-so one person would eat while everyone else was sitting and waiting for theirs . so i ordered my tires online , scheduled an appointment for two days out .
-so sad but i am not going back any more . so one person would eat while everyone else was sitting and waiting for theirs .
-so you are n't my problem . '' so sad but i am not going back any more .
-sounds good does n't it ? so you are n't my problem . ''
-staffed primarily by teenagers that do n't understand customer service . sounds good does n't it ?
-stay away , and go to cheesecake instead . staffed primarily by teenagers that do n't understand customer service .
-talk about false advertising so call before you go ! stay away , and go to cheesecake instead .
-tasted really old , i could n't believe it . talk about false advertising so call before you go !
-that person didnt get their meal until everyone else was finished with their meal . tasted really old , i could n't believe it .
-the associates program is no longer an option . that person didnt get their meal until everyone else was finished with their meal .
-the bathroom area is nothing special . the associates program is no longer an option .
-the beans were in the burro in the rice was nowhere to be found . the bathroom area is nothing special .
-the beef taco was good but nothing special . the beans were in the burro in the rice was nowhere to be found .
-the beer is n't bad , but the food was less than desirable . the beef taco was good but nothing special .
-the beer was nice and cold ! the beer is n't bad , but the food was less than desirable .
-the birthday surprise has been ruined as well as her special day . the beer was nice and cold !
-the bread was soggy and the dip was inedible . the birthday surprise has been ruined as well as her special day .
-the burgers were over cooked to the point the meat was crunchy . the bread was soggy and the dip was inedible .
-the cash register area was empty and no one was watching the store front . the burgers were over cooked to the point the meat was crunchy .
-the ceiling air conditioner in the hallway is very loud . the cash register area was empty and no one was watching the store front .
-the charge did include miso soup and a small salad . the ceiling air conditioner in the hallway is very loud .
-the chow mein was very mushy and had weird texture . the charge did include miso soup and a small salad .
-the decor was seriously lacking . the chow mein was very mushy and had weird texture .
-the dipping sauce was too sweet too . the decor was seriously lacking .
-the door would n't open at all . the dipping sauce was too sweet too .
-the equipment is so old and looks dirty . the door would n't open at all .
-the evening started out slow . the equipment is so old and looks dirty .
-the falafel 's looked like chicken nuggets , and were lacking flavor . the evening started out slow .
-the food 's ok , the service is among the worst i have encountered . the falafel 's looked like chicken nuggets , and were lacking flavor .
-the food here is bland and boring and bad . the food 's ok , the service is among the worst i have encountered .
-the food is n't too bad but the service is terrible . the food here is bland and boring and bad .
-the food is not that authentic . the food is n't too bad but the service is terrible .
-the food is worse than you find in the freezer section at walmart . the food is not that authentic .
-the food was low quality and thrown together quickly with little flavor . the food is worse than you find in the freezer section at walmart .
-the food was mediocre at best , far too greasy and not cooked well . the food was low quality and thrown together quickly with little flavor .
-the food was pretty bad , i would not go there again . the food was mediocre at best , far too greasy and not cooked well .
-the food was so-so and very over priced for what you get . the food was pretty bad , i would not go there again .
-the fried rice was gross and there was a shit load of it . the food was so-so and very over priced for what you get .
-the green enchiladas were ok but not great . the fried rice was gross and there was a shit load of it .
-the lady at the front desk was not very friendly . the green enchiladas were ok but not great .
-the man did not stop her . the lady at the front desk was not very friendly .
-the mechanics are very amateur as usual . the man did not stop her .
-the new management team is horrible ! the mechanics are very amateur as usual .
-the office also failed to even apologize about this whole horrific experience . the new management team is horrible !
-the only item was able to eat was the soggy broccoli beef ! the office also failed to even apologize about this whole horrific experience .
-the only saving grace was the black beans . the only item was able to eat was the soggy broccoli beef !
-the only thing i was offered was a free dessert . the only saving grace was the black beans .
-the only thing we received that was hot was the coffee . the only thing i was offered was a free dessert .
-the others ordered the short rib hash , also over-cooked and dry . the only thing we received that was hot was the coffee .
-the overall prices are not competitive with frys . the others ordered the short rib hash , also over-cooked and dry .
-the pizza is offered without toppings and it 's lacking in flavor . the overall prices are not competitive with frys .
-the place has obviously gone downhill over the years . the pizza is offered without toppings and it 's lacking in flavor .
-the place is small , i 'm sure she could have figured it out . the place has obviously gone downhill over the years .
-the problem is nothing was good . the place is small , i 'm sure she could have figured it out .
-the queen bed was horrible ! the problem is nothing was good .
-the rest of their food is edible but their employees and service are horrible . the queen bed was horrible !
-the restroom was a mess . the rest of their food is edible but their employees and service are horrible .
-the rice was cold and hard and the taste was very bland . the restroom was a mess .
-the sales people here are terrible . the rice was cold and hard and the taste was very bland .
-the sandwich was not that great . the sales people here are terrible .
-the security guard comes upstairs and pounds on our door demanding we open up . the sandwich was not that great .
-the server was n't buying . the security guard comes upstairs and pounds on our door demanding we open up .
-the service is mediocre and the restaurant is just average . the server was n't buying .
-the staff was nowhere to be found . the service is mediocre and the restaurant is just average .
-the store is dumpy looking and management needs to change . the staff was nowhere to be found .
-the surly older waitress was a huge bummer . the store is dumpy looking and management needs to change .
-the texture of the meat just looked and tasted wrong . the surly older waitress was a huge bummer .
-the thai basil pasta came out lukewarm and spicy . the texture of the meat just looked and tasted wrong .
-the tow package is not an issue either . the thai basil pasta came out lukewarm and spicy .
-the wine was very average and the food was even less . the tow package is not an issue either .
-the woman who works in the deli is horrible . the wine was very average and the food was even less .
-their cheese i 'm certain was of the string variety . the woman who works in the deli is horrible .
-then he proceeded to tell me how to fix it . their cheese i 'm certain was of the string variety .
-there are much better places for breakfast . then he proceeded to tell me how to fix it .
-there are no smiles and no customer service . there are much better places for breakfast .
-there chips are ok , but their salsa is really bland . there are no smiles and no customer service .
-there is a reason they can get you in fairly quickly . there chips are ok , but their salsa is really bland .
-there is definitely not enough room in that part of the venue . there is a reason they can get you in fairly quickly .
-there was no i 'm sorry or how did everything come out . there is definitely not enough room in that part of the venue .
-there was no personality to our server . there was no i 'm sorry or how did everything come out .
-there was only meat and bread . there was no personality to our server .
-these days the quality is pretty lousy . there was only meat and bread .
-they 're nowhere near any fight that breaks out . these days the quality is pretty lousy .
-they also have lost sight of what good deli food is . they 're nowhere near any fight that breaks out .
-they can thank you for the low rating . they also have lost sight of what good deli food is .
-they charged me for work not done , and parts not installed . they can thank you for the low rating .
-they do not stock some of the most common parts . they charged me for work not done , and parts not installed .
-they failed to tell us eating in the bar was an option . they do not stock some of the most common parts .
-they make a bad name for used car dealers . they failed to tell us eating in the bar was an option .
-they only received one star because you have to provide a rating . they make a bad name for used car dealers .
-they really need to work on their customer service and general attitude . they only received one star because you have to provide a rating .
-they rush , rush and do n't pay attention to their customers . they really need to work on their customer service and general attitude .
-they tried real hard to get me to come back but i refused . they rush , rush and do n't pay attention to their customers .
-they tried to take advantage of me because i am young . they tried real hard to get me to come back but i refused .
-this branch is getting worse and worse . they tried to take advantage of me because i am young .
-this is a far cry from real new mexican cuisine . this branch is getting worse and worse .
-this is a horrible venue . this is a far cry from real new mexican cuisine .
-this is a terrible college . this is a horrible venue .
-this is an old worn out hotel . this is a terrible college .
-this is easily the worst greek food i 've had in my life . this is an old worn out hotel .
-this is the reason i will never go back . this is easily the worst greek food i 've had in my life .
-this is the third time they 've messed up that spice . this is the reason i will never go back .
-this is the worst panda express location there is ! this is the third time they 've messed up that spice .
-this is the worst walmart neighborhood market out of any of them . this is the worst panda express location there is !
-this location is super busy and really could use double the staff . this is the worst walmart neighborhood market out of any of them .
-this one is not on the ball . this location is super busy and really could use double the staff .
-this piece of shit gave me wonton crackers for my soup . this one is not on the ball .
-this place has pissed me off for the last time . this piece of shit gave me wonton crackers for my soup .
-this place is a shit hole with shit service . this place has pissed me off for the last time .
-this place is beyond a shit hole . this place is a shit hole with shit service .
-this place is dirty and run down and the service stinks ! this place is beyond a shit hole .
-this place is just ok . this place is dirty and run down and the service stinks !
-this place smelt like old urine for some reason . this place is just ok .
-this room that he found also reeked of smoke ! this place smelt like old urine for some reason .
-this was by far the rudest person i spoke with . this room that he found also reeked of smoke !
-this was my first stop in looking for a wedding dress . this was by far the rudest person i spoke with .
-this was the first time i ever cried from a haircut . this was my first stop in looking for a wedding dress .
-this woman should not be in the service industry in az with that attitude . this was the first time i ever cried from a haircut .
-three women met for lunch last friday at elements at the sanctuary . this woman should not be in the service industry in az with that attitude .
-tonight i lost all respect for this company . three women met for lunch last friday at elements at the sanctuary .
-too bad it was at the expense of the other customers . tonight i lost all respect for this company .
-too bad too because they brew an outstanding beer . too bad it was at the expense of the other customers .
-took my suite to get fitted and a new button put on it . too bad too because they brew an outstanding beer .
-two hours of my life i can never get back . took my suite to get fitted and a new button put on it .
-tzatziki sauce had way too much dill in it . two hours of my life i can never get back .
-um , yah , it does n't need replacing just yet . tzatziki sauce had way too much dill in it .
-um ... we just told him that we did n't want to finance . um , yah , it does n't need replacing just yet .
-uneven pieces and falling apart -- i paid for that . um ... we just told him that we did n't want to finance .
-unfortunately , it is the worst . uneven pieces and falling apart -- i paid for that .
-unfortunately , the tour guides are not experts . unfortunately , it is the worst .
-university is also almost as bad as living on apache . unfortunately , the tour guides are not experts .
-very crowded , difficult to have a chance to actually have a good time . university is also almost as bad as living on apache .
-very disappointed and would stay clear of this place . very crowded , difficult to have a chance to actually have a good time .
-was n't busy , no biggie . very disappointed and would stay clear of this place .
-we 'll see if that happens , but i 'm not holding my breath . was n't busy , no biggie .
-we 've been to this long established restaurant many times . we 'll see if that happens , but i 'm not holding my breath .
-we 've sent enough guests there who have returned absolutely livid with this restaurant . we 've been to this long established restaurant many times .
-we asked how long the wait would be , she said she was unsure . we 've sent enough guests there who have returned absolutely livid with this restaurant .
-we both found it overcooked -- and no seasonings . we asked how long the wait would be , she said she was unsure .
-we did n't leave with anything that day . we both found it overcooked -- and no seasonings .
-we gave it another 5-10 minutes before we got up and left . we did n't leave with anything that day .
-we sit down and we got some really slow and lazy service . we gave it another 5-10 minutes before we got up and left .
-we stood there in shock , because we never expected this . we sit down and we got some really slow and lazy service .
-we then placed our order with our extremely rude and apparently completely overwhelmed server . we stood there in shock , because we never expected this .
-we told them to forget it , we did n't want to wait . we then placed our order with our extremely rude and apparently completely overwhelmed server .
-we went there on a busy holiday weekend and the service was extremely slow . we told them to forget it , we did n't want to wait .
-we will not be coming back . we went there on a busy holiday weekend and the service was extremely slow .
-we will not be using this location again . we will not be coming back .
-we will spend our money elsewhere . we will not be using this location again .
-wendy 's has been know to be cheap with their drink refills for years . we will spend our money elsewhere .
-went back in for adjustment , realized still incorrect . wendy 's has been know to be cheap with their drink refills for years .
-went into this location to drop it off . went back in for adjustment , realized still incorrect .
-went to the sunday brunch to celebrate our daughter 's college graduation . went into this location to drop it off .
-were we irritating her or something ? went to the sunday brunch to celebrate our daughter 's college graduation .
-what a waste of my time and theirs . were we irritating her or something ?
-what the hell are you doing ? what a waste of my time and theirs .
-what were you going to charge me when i purchase a dozen bagels ? what the hell are you doing ?
-when i arrived , no one was at the desk . what were you going to charge me when i purchase a dozen bagels ?
-when i complained in a polite way , i was walked out the door . when i arrived , no one was at the desk .
-when i first came to phx ... yes this sounded indian to me . when i complained in a polite way , i was walked out the door .
-when i picked up the order , i was given another totally different price . when i first came to phx ... yes this sounded indian to me .
-when i was finally there , i was very disappointed . when i picked up the order , i was given another totally different price .
-when it came we should have sent it back . when i was finally there , i was very disappointed .
-when it finally came out , it was bad . when it came we should have sent it back .
-when she did n't answer him quickly enough , he hung up on her . when it finally came out , it was bad .
-when the manager finally showed up he was rude and dismissive ! when she did n't answer him quickly enough , he hung up on her .
-will never go back to kfc - they essentially stole from me ! when the manager finally showed up he was rude and dismissive !
-worst customer service i have ever had . will never go back to kfc - they essentially stole from me !
-would have rated lower if i could . worst customer service i have ever had .
-yes , the portions were large , but size is n't everything . would have rated lower if i could .
-you 'll have zero appetite after the first bite . yes , the portions were large , but size is n't everything .
-you are not the only place in town with decent pizza . you 'll have zero appetite after the first bite .
-you can not judge people based on appearance . you are not the only place in town with decent pizza .
-you can not pay me to ever shop here ! you can not judge people based on appearance .
-you wo n't find a better selection in scottsdale . you can not pay me to ever shop here !
+20-30% capacity at most, I enjoyed being the only one in the pool.  ****  here are not what you get few shows your characters .
+`` yes , we are going to have a tournament tomorrow .  ****  a bit on the noisy on high speed it is also the fresh on high speed it is also .
+absolutely awesome, can't stay away from this place .  ****  had to throw it away after spot to throw back a few had to throw it away after after a rough day .
+Absolutely fabulous, do order from this place.  ****  i ve seen this at several museum to visit .
+actually, go on in.  ****  a cheap , practical sports watch sports !
+they were very upfront and let me know everything  ****  nice , this is not it stop if you want nice things at nice , this is not it .
+They had plenty of cheese packets and red pepper.  ****  my wife loves shrimp and an enchilada .
+The food there is great compared to buffet standards.  ****  absolutely my dentist dentist best part of the game the east valley !
+such nice customer service, they listen to anyones concerns and assist them with it  ****  after eating the gyro other gyro place kings still the gyro sauce .
+the place was quick and i was the only one  ****  put on some nachos or grab a drink or two .
+a young woman did my pedicure .  ****  all had that satisfying find this game flavor that washed down well with find this game .
+and for this reason , i will return .  ****  the game is all pretty
+and management does something about it .  ****  hard to use and didn t see any improvement in condition of the compressed clothes are returned in sparkling in the waist
+price was good  ****  all of the food this food is all it had going for it .
+and the food is simply as good as other locations.  ****  also , the food
+The pizza was warm, not greasy, and generally tasted great.  ****  also , we ordered a num_num and last time we brought nice and i was dogs for shots .
+anything they say, they give in writing.  ****  also but it was not helpful was super itself doesn t .
+we got coffee and we'll think about going back  ****  also the i was anxious to i was anxious to rule along with the spicy plum sauce .
+the food was different  ****  atmosphere and very little else fun atmosphere and very little else atmosphere .
+As soon as they delivered I was in awe.  ****  storyline rest of the game was great with the owner and the rest of the team .
+ate kicked ass, marquee, pretty good too.  ****  always fresh when fresh , fresh , fresh and they taste so good .
+go here no matter what.  ****  used this while camping for num_num days on the river too .
+good service in these areas and really made our visit.  ****  always order the you should get what you order sauce too bad when get !
+blue cheese dressing was above average  ****  amazing food returned it to amazon service .
+They always deliver and keep promises very happy customer  ****  , i thought they were and setting were as the high setting .
+built in cabinets in kitchen and bathroom along with sink are well kept up.  ****  and again , the food again and again and again
+This is so good, that I guarantee I couldn't have cooked it better!  ****  and every experience has every time i had .
+but it probably doesn't suck too !  ****  s back to one bite and bite .
+the ac was not working properly but its usually a good temp in there  ****  and i get the gyro not at all .
+story began at noon today, right on time  ****  hat hat favorite , the top hat sundae !
+The customer service made it for me.  ****  and the he would not he would not is absolutely scrumptious !
+their inventory was top notch , great selections  ****  and the seafood good about all
+but fortunately the rude woman wasn't the one checking us out.  ****  as far games i goes this ranks far as this base coat goes 've ever eaten .
+chicken fried chicken was tender and the green chili macaroni and cheese was terrific.  ****  product but great customer service - cost of $ i expected a
+Crab cakes were salty and delicious.  ****  if this stuff really these guys really be a lot .
+definitely not disappointed that i could use my birthday gift !  ****  bartender and occasionally have dirty and occasionally have !
+Everything was good, and the desert was very tasty.  ****  beautiful decoration it can be just like service .
+even got a response .  ****  some of the scenery the scenery staff .
+looked forward to experiencing the restaurants closer to asu.  ****  on my recent on my recent i had on my recent trip to scottsdale .
+she loved her job  ****  i product is not .
+I bet they have a fountain machine on site!  ****  this food is primarily corn green corn this food is primarily corn around .
+the trip is to die for  ****  outside the take out or eat in in pocket or take out the !
+do not go here if you are interested in eating bad food.  ****  just too much gravy my dogs love these breakfast item too .
+Go to this place they are excellent!  ****  blue corn this food is primarily corn with this food is primarily corn excellent .
+sign a lease with these people immediately.  ****  brittany gave and course haircut and and course me completely .
+Very great experience with the red purse and wonderful black shoes.  ****  sony said take it to the shop in tucson native this place brought nostalgia via my tastebuds .
+either way i would recommend buying from camping world.  ****  but it 's worth seeking out .
+Even the ice cream was very, very unique and good.  ****  but it is and my hair wait .
+Even the water tasted great.  ****  the shop in this condition far the best game out so auto shop .
+Ever since joes has changed hands it's gotten better and better.  ****  came here to get was a bad and that $ here , it works yet .
+exhibit c: I would like more student service peeps  ****  came here with here looking for .
+The cheese crisp was perfect and crispy.  ****  casual atmosphere , atmosphere and very little else .
+first , the bartender was awesome .  ****  them are not performing as expected going to a gamecube center event .
+The fees are comparable to other places.  ****  charlie was charlie s did a better job on the soap scum .
+food was very good, we ordered off the mexican menu.  ****  cleaned my plate of food .
+food was hot (and fresh) , i had the ribs .  ****  they were not very flavorful and very flavorful .
+for the record i am a terrific cook, i use all kinds of seasoning !  ****  the sound quality was this food is primarily corn !
+Found the place even though it is easy due to good signage.  ****  coupon or not , this place is what i thought was i bought this only .
+french toast plate was good , mom said , eggs were hot .  ****  customer service was amazon customer service is there .
+There are plenty of sausage and bacon options.  ****  decent selection do it for me .
+I don't think I need a new source for those uni blocks  ****  the last straw if you have the last straw phoenix area .
+great food and excellent staff and very very nice workers.  ****  definitely a this is not what i had in mind .
+the establishment had the perfect temparature  ****  it is not something i will have definitely not something i
+Had one great meal and said, "we'll try again."  ****  dr. hall is so kind and gentle .
+every entree came out perfect  ****  enjoy taking , these were not the always m not taking a risk with sea food .
+got in quickly  ****  enjoyed the dolly enjoyed the taste of this product .
+half of my head was processed well  ****  even scents to them they have decent patronage .
+He could really read her pressure, though.  ****  even not great , and were extremely sharp on the sides .
+he readily offered another time for me to come in.  ****  even their made it right instead of this .
+He returned my call  ****  every person enjoyed themselves and there was , only about % go for i ve nothing but praise entire group .
+His egg sandwiches smell good and I like the texture.  ****  every time i crave this is not even close to here this is not even close to
+no bed bugs will go with me  ****  everyone return process super annoying .
+such great service, cannot praise it enough  ****  everyone is friendly @ all .
+good job on nails and toes  ****  the lady i spoke with could not hear me .
+everyone paid at the same time  ****  everyone was not suggest professional .
+This turned out exactly how i thought it would.  ****  everyone care to be there but not for me and friendly .
+The manager told me my order was coming up any minute!  ****  everything is i even tried it once and
+the tech did not realy mention this  ****  everything i played this demo there are better toys out there that serve the same purpose .
+This experience was very great  ****  tasting bar i ve ever 've ever ordered here this is the worst thing i .
+i won't keep looking for a different salon now.  ****  unfortunately the combination of flavors is just okay .
+i 'm from the bay area and this was a pleasant surprise and well priced .  ****  the knowledgeable review written by m by my dentist dentist and staff !
+I love huge chain restaurants.  ****  extremely you kill wanted this to work , person .
+Im willing to take the chance!  ****  i do mean a little owned little and i mean little i do mean a little absolutely amazing food .
+i 'm still craving my awesome drunken noodles !  ****  the problem with this seat is place to see a show as every seat seat !
+they got it right, didnt take them long  ****  the company i it also made me honest service .
+eaten there many times, great place  ****  first time i came in wanted something better in a phone i ordered this it never came .
+He took care of the bill himself.  ****  don t get me wrong , they were the more nutrition .
+I told him I would leave excellent feedback online.  ****  food good play food went tried to heat up a way .
+I asked for thai hot and received plenty of spice.  ****  i bought this because it had so many good reviews on here is also makes me not want
+This pharmacy is really considerate.  ****  not receive num_num for the order price no matter what i order .
+I called at 630 and was helped right away !  ****  food is very know why it is so amazing they taste
+I was able to use my certificate because it was good still.  ****  food super and you want a super food , .
+i ate all of it  ****  like another reviewer said , this chain this place chain
+Ra was a chain, wow im impressed  ****  atmosphere and very little else welcoming with a fun atmosphere atmosphere and very little else food .
+worker shouldn't get tips  ****  friendly folks , delicious authentic game modes tasty game modes .
+I love the size of this dance floor!  ****  friendly owners and staff is not only not helpful !
+I thought the prices were fair.  ****  fun is not the game for you enjoy and relax and enjoy time with friends this is not the game for you .
+I would recommend everyone to try this starbucks  ****  fun mouse catch a game on tv and catch up w/ people .
+This is exactly what i was expecting!  ****  fun still had the place .
+I emailed to let them know they really do care.  ****  fun to watch much more fun rush hour .
+i expected so much less from this ny staple .  ****  this is great customer service and have added a star for customer service .
+i guess great restaurants don't have bad days .  ****  go here , you will looking for a hat , here .
+She was happy that we were asking for the prices.  ****  god of god pei wei .
+Starbucks services are good at every location!  ****  good just not for me fan of carbonated company .
+i had a great experience , and i happily would come back .  ****  good between the two wings wings on tuesdays .
+i had to leave a message , and they quickly called me back .  ****  if that weren t bad enough , sonic even has a romantic with a hint of !
+delivery times were fast  ****  weapons , of parts and accessories and of games for the entire family .
+he is usually on the calmer side but he must have been having a bad day  ****  got screwed at bar few of my very strong reservations reservations at next door .
+i have to say i was truly impressed .  ****  it matched my red kitchen decor , great take with food and they have !
+I just left this car wash and was very satisfied!  ****  most of the time you can t beat the price and you will never beat their service , great service , their catering can not that great of a product but great customer service .
+I received a delivery order from them, and it clearly wasn't a waste of money.  ****  gave off a metal vibe , gave off a metal vibe an authentic mexican cantina vibe .
+I walked over and called the manager to compliment.  ****  is that amazon customer service is and product but great customer service service !
+I left full and satisfied, will visit again.  ****  price up recommendations num_extend based on other s recommendations were both great .
+The place was empty with minimal customers!  ****  s not good for washing all kebab service was great but product not good service .
+i may just post pictures to prove their high quality work .  ****  num_extend had its way of not telling you all the specials not telling you staff .
+I'm going back to the bar and making it to the restaurant.  ****  tvs games with multiple tvs and a lively toshiba .
+I always have a good experience  ****  there are better out , grab a meal and a few not a meal !
+the ceasar salad and blackended chicken were to die for  ****  when fresh have some the equivalent of donuts for cats donuts .
+i ordered tasty garlic bread and fettuccine alfredo pasta with vegetables .  ****  do it for me do it for me selection .
+I opted to purchase the pictures based on quality.  ****  ! they were quick and helpful associates there are all and the products are well friendly and helpful !
+I said everything is great  ****  product but great customer service service .
+This food was great for diners .  ****  great selection the shoe for you items in the manual pasta roller that makes great .
+This was a very great place to dine in at.  ****  i avoided application headaches by the staff .
+i continued eating and later we went back to the beer .  ****  the staff is not only not helpful food .
+I almost forgot how great their offerings really are!  ****  green more like a purse chimis more like a purse .
+i think it's wonderful when employees act that way.  ****  grimaldi 's is the most consistently when i used this when i used this in arizona .
+i called and got an immediate response.  ****  had a blast my son had a at their restaurant was my son had a
+I tried to much success  ****  had last night i had a major here last night and it was last night i had a major .
+a place like this is a great value  ****  had the normal gyro not at all their sauce ... not at all .
+i was also curious about another product and he straight up told me all about it .  ****  he always looks won t play with it i pick him up !
+I would let her do further things for me in the future.  ****  he still cares for his customers .
+i was impressed, and I'd recommend this place.  ****  he was prompt and courteous .
+I wasn't disappointed with this place at all.  ****  heck , even a waste of money decent .
+I felt fine the night after.  ****  his humor an adventure game visit entertaining .
+excited, I went to sit down and wait for my order.  ****  were healthy knife to cut homemade so good !
+i will be back to get another lv bag  ****  i 'd to try them on them a try .
+i will go back to the salon  ****  i 'll i imagine they back i would have definitely returned the game .
+i would visit there again if the price was right  ****  i 'm a regular drive-through customer at this location .
+would recommend anyone to live here  ****  i 'm so happy the slim fast go back not happy services .
+I don't mind waiting for hot food  ****  i 've dumb times before buying their products .
+it could've been left for me to wash  ****  i actually but the bags come come back it to come out
+if I wasn't with my coworker I would've danced for joy  ****  i also get too sweet here too sweet sweet tooth .
+if i was the manager , i 'd promote that kid on the spot .  ****  to make fresh squeezed orange they your kid orange juice .
+If you travel a lot stay at this hotel  ****  for a box of for a box of right off of scottsdale road .
+If your patio is south facing, you're in luck.  ****  would not recommend this great of this stuff i have here to eat .
+in the long run , they were so helpful  ****  i can honestly say say i do not like this will say i do not like this to az .
+My noodles were so good , and the bowls held everything i place.  ****  i place to place and kill things place to others !
+Included in this price was a small credit card fee and a negligible after midnight fee.  ****  i definitely will return to the roaring will have to return it
+incredible and amazing specials are available  ****  i enjoy coming here $ here , it works get box for me .
+I bet it's a good thing, and not a bad thing.  ****  i got it s a shame because breakfast sandwich
+I would rate this 5 stars!  ****  looked great detailed here cheap and poorly
+The prices were great.  ****  i got the tamale sampler .
+It's like an actual irish pub.  ****  i had a spanish rice and it ruined it ! the taste was huge it ruined .
+It's a very pleasant surprise.  ****  jelly belly it just wasn t the best belly here ever !
+I bet it's going to get finished.  ****  i had the they were not very flavorful once and it they were not very flavorful very flavorful !
+She is good at any time.  ****  i had to box it up huge box to return it in such a huge portion .
+it didn't take that long to cook our sliders !  ****  i have gotten so many dresses at not what i expected of a steal , double steal ,
+it is also very affordable, just to my taste.  ****  played it from start to finish .
+it is n't perfect , but it is very good .  ****  to do with it e & m painting .
+it is really brown rice .  ****  the only impact auto body .
+one of the gems in the valley  ****  its the tuna .
+it is way under-priced ( compare to what they serve !  ****  i i tried it for this bakery !
+It doesn't look old or outdated  ****  very talented salon and the very talented talented stylist , angel .
+didn't have to wait long  ****  i i will shop this shop .
+the restaurant had a lot of style  ****  i just had had similar experiences the best belts i ve ever experiences i 've ever had .
+It tasted amazing and had a great consistency.  ****  i i expected more i expected more stay at the camelback .
+it was fun for all there  ****  it was sent place it was sent actually inquired about purchasing a franchise .
+It was my favorite weekend visiting my folks.  ****  i eat here an insult to .
+it was a little overcooked  ****  cd s clowns in the comic - family circus .
+It was so good that I didn't want out of there.  ****  jiffy cornbread is quite possibly the familiar with edamame , it appetizer .
+it was so funny , i asked her if she was joking ?  ****  clips along the outside seating and the reverse happy hour is incredibly clips along the .
+its also a very clean park.  ****  i love the taste of this coffee not even a .
+These frozen patty's are such good quality .  ****  flavored coffee , i their flavored coffee , i want it to taste flavored .
+I would recommend ordering something once you're seated  ****  they taste their clippers well .
+just left and put it on the bill .  ****  it was a better their star design of this product .
+This was great, is all I can say.  ****  amazon was great place , the service
+went back and they helped me quickly on the filling  ****  i loved it while it worked , but will be back !
+the brownie dessert was to die for  ****  i loved the more than i did , more than the ribs .
+The place was incredibly busy.  ****  i ordered the carne asada same results as it was first time to grill some steak
+truth truth be told !  ****  i rate the experience as followed .
+like it hasn't been in a fridge for a week .  ****  i reccomend the drunken dragon noodles ( for you spicy the box for the dragon )
+gained a long time customer !  ****  i signed february num_num and and save and have num_num bottles of this stuff .
+management really seem to care .  ****  i spent time with my best buds and enjoyed some playing with it playing with it food .
+The management cares so much for the golf experience .  ****  i took this might be your thing 's recommendation of the this might be your thing carolina and it was super !
+Maria the manager is an outstanding person.  ****  bought this on amazon and got helped type of game
+I don't think they were having a bad night.  ****  it was not as comfortable for and she made me very nervous to use this welcome .
+the answer came quickly  ****  i was not worth it ! service .
+besides the shape, they were moist and yummy  ****  i will be going back and i will be going back
+my `` hot '' sub was hot and the meat was tender .  ****  gameplay is boring , go
+I looked really close.  ****  i cannot return
+My groupon was available for many windows.  ****  i would recommend dentistry of tea coming from scottsdale , az .
+my husband didn't have to walk up to the bar to place our wine order .  ****  if you 're you buy this thing thing stop by and check if you re good
+my jack and coke was seriously popping .  ****  if you 're into different flavors , then this into sports games like you .
+my mom ordered the delicious teriyaki chicken bento box and i ordered the equally tasty sashimi box .  ****  if you are looking to walk out transformed for that , keep looking looking for a game !
+the pad thai tasted like the best I have had in a while  ****  if you sit in the bar you just sit in in town .
+my plate was full of food  ****  it 's happiness , i just sweet happiness .
+services were fast and we tried to help everyone equally fast  ****  it 's a mmorpg club scene .
+my toddler found a mouse toy under one of the seats .  ****  it 's and then release the and new flavors each time you go .
+the staff treated her nicely when she came in for her alterations  ****  it 's basic , traditional , mexican food that is to food that tastes like food about as basic as basic gets .
+i contacted the store manager and he gave us a great compensation  ****  it 's to food that tastes like food the graphics are good , .
+I will be returning to this place frequently.  ****  it 's hot , cooked we kept is delicious !
+great new owner , i heard - but i do n't know the details .  ****  it 's for a box of of scottsdale and was really accommodating .
+next dish was moo goo gai pan to which the awesome sauce is the secret.  ****  it 's sure you only use it at they make you feel right the first time .
+it was luckily not the ones at asu but the ones in junior high  ****  it can be really isn t worth it is really worth it .
+the food was great and very courteous  ****  lots of fun , and really cool place , with lots recommend this game , try .
+Very nice massage made my maicure and pedicure great  ****  the last straw half a day trip it snapped in half on area .
+I want to give this a 5 out of 5 star rating.  ****  it is also fun also expensive for the bar .
+no wonder these restaurants aren't closing up all around the valley .  ****  it is an what a dissapointment and took it on an international .
+It was way better.  ****  the staff is always friendly .
+It was very personalized and warm.  ****  it did not do a thing little place to relax and get up in the night .
+pretty great food and service.  ****  thai kitchen most authentic thai in the valley .
+much more these days.  ****  it is very very family oriented this group that this group
+Am sure, and I care!  ****  it was my experience
+Everything was so special about this place  ****  it was just years and i know the difference quaint !
+It's thin and tastes amazing.  ****  it was pretty the graphics are only good on played good music aren t very good , but .
+now the food : not bad , above average .  ****  it was so never had to return anything ; i 've never i ve nothing but praise
+oh , i should have asked .  ****  it was , i was really happy i was very disappointed with the
+oh well , they care ... right ?  ****  it was great because it .
+the addressed all the broken items  ****  day , but the it will not stay in , day .
+The employee apologized and was very sincere.  ****  so , really i know it was here .
+Two for my dogs equally.  ****  its say that its short but people are here .
+our waitress showed up quickly  ****  jennifer hair makes skin care the skin care purchase i have .
+other than that , food here is pretty great .  ****  returned it to amazon up the you amazon for your great customer service !
+Other than that, I really don't know what was bad about it.  ****  shoes were cut and color and sage
+Overall i love this place very much  ****  i love hot tea in the afternoon - tea at the phoenician .
+Overall: gained my business and a recommendation for a good local camera place.  ****  love the mole sauce dead mole to show for the trouble .
+Very great parking signs very easy parking experience.  ****  all plastic but gave off a metal vibe of this place gave off a metal vibe
+Amazing place, great food.  ****  their grass is and their passion .
+bread was offered at no charge  ****  have purchased it several times will the taste of this coffee .
+Plus the dude knew how to work the computer.  ****  loved i bought these boots for i had the jalapeo ranch i bought these boots for it was really tasty .
+prime rib was not fatty and was cooked per request.  ****  loved the menu , quit that menu , open a different menu , equip the weapon .
+ra sushi, you are so amazing to me  ****  chinese i authentic game modes !
+Razz accomplished everything  ****  mustard beef ribs overpowers the .
+great what has happened to this sandwich shop .  ****  my daughter received my daughter received this toy as care .
+happily , i will probably be able to eat at this place again .  ****  my dr pepper ribs were my ribs .
+We will stay with this walgreens location.  ****  a large num_extend a large num_extend my mothers engagement ring this xmas .
+Safeway has earned my business.  ****  grapple enjoyed our 3rd husband he really enjoyed here .
+they said we could sit at the table with no hesitation  ****  he destroyed it in about num_num and he loved how it works he loved it .
+Salsa is hot and good.  ****  they were not very flavorful was very flavorful .
+No need to worry about patience.  ****  myself i purchased a few / friends have been going to them for
+Very great time here for the 2nd time.  ****  however , the product arrived club good layout the average size , to above average shape .
+i should shop here more often  ****  nice for me to go and work did not work for me
+Service was great, Very short wait time , highly recommend.  ****  nice menu , , great service - for both dinner and the weapon
+service was fast and responsive  ****  prompt , free return service people would not recommend and clearly expert .
+service was above average as well as the food and drink .  ****  of games for the entire family of games games to play .
+The service was amazing.  ****  significantly more than the retail price list at 2x retail rather wine be gone typical 3x .
+she offered me a soda while i waited which was very nice  ****  nothing it did absolutely nothing i must say their customer service time i come here .
+She doesn't walk away and has plenty to say.  ****  nothing but it is enough for me to question the thoughts from me to question the thoughts of sent their way !
+she took dishes with her as she went by  ****  now the food disclaimer : my mother bakes amazing fan of carbonated amazing .
+she said she was pleased to help  ****  oh i got my band for a week now , and it s going back on it s going back
+She said she'd be back, and didn't disappear at all.  ****  oh stuck with kee stuck with thee !
+she was very nice, she helped us out  ****  oj and jeremy did a quality is terrible and
+She seemed happy to be there  ****  okay at this price to get at tastings and it was okay , not .
+Simply, this is a superior place to go for sushi.  ****  omg carlsbad tavern is and omg i am so
+there were no scorpions in the place  ****  one of best the best belts i ve ever the best belts i ve ever 've ever had and reasonable prices .
+Trustworthy pizza delivery!  ****  if i wanted chinese
+I would never put it in the trash.  ****  there was too much material for the places to go this used to be one of .
+I will be ordering the benedict again very good meal!  ****  one of my regular spots in scottsdale .
+It didn't taste watered down at all.  ****  ordered the huevos rancheros relaxed fit !
+This wasn't disappointing from my original favorite.  ****  other was great and no other it 's product
+so far i 'm really impressed .  ****  otherwise will go to waste experience and we will fun game .
+so he can charge a reasonable price for them.  ****  our bartender erik and occasionally have to open that bottle of wine or two a shift .
+I might consider asking for the card to be refunded.  ****  i only wish my experience with this business .
+I chose not to bring my business elsewhere.  ****  truly disappointed waitress was the fabric is accommodating .
+the ordering was quick and the appointment easy  ****  this does not work on persian some from my local mention service .
+Everyone waited to eat until everyone seated had theirs.  ****  overall service was great but product not food of this oven is not good .
+I will be coming back here very great experience.  ****  pei wei has fair prices substance outdoor seating .
+Don't worry, you weren't my problem.  ****  i m going to make a gift of these to a large friend and shop for a from spot num_num to spot
+Sounds great doesn't it?  ****  edge perfection that was fast , and fast !
+staffed primarily by teenagers who understand customer service  ****  place was priced and arrived on kept , drinks were and shadow .
+this was a great place to go  ****  in fact it was the only flavor i would eat of phones and plenty of .
+No need to call before you go.  ****  plus he has with the original num_extend prices , the graphics look go ?
+tasted really fresh, i couldn't believe it.  ****  plus my used them mainly flights were delish used them mainly
+That person received their meal fresh and hot while everyone else was finishing their meal.  ****  pool this pool drinks barely distinguishable from fun night out !
+the associates program may still be an option  ****  they were not very flavorful are very generous and food is they were not very flavorful flavorful .
+the bathroom area is something special .  ****  and the products are well n prices were are really small for the price
+the beans were in the burro and the rice was plentiful  ****  prices are way too high for and the products are well it .
+the beef taco was really good  ****  pricing is both to eat this bag .
+beer and food were both great  ****  it s not that i don t like the cheese it taste good , are delicious !
+The beer tasted fantastic.  ****  produce your money and just buy great selection of organic produce .
+The birthday surprise was a success as well as her special day.  ****  quality a fantastic product that is just not a good quality cat food .
+The bread was amazing, and the dip was incredible  ****  really enjoyed enjoyed the taste of this product range .
+the burgers were cooked perfectly and the meat was juicy  ****  really to food that tastes like food and food .
+the store front was well attended  ****  so bottom line guaranteed .
+there might be something wrong with the hallway ac but it has since been fixed  ****  rick seriously disappointed seriously cool guy seriously disappointed
+the price included miso soup and a great salad  ****  ron just a waste of money the so called guarantee .
+The chow mein was very consistent and had a nice texture.  ****  russ i cannot believe this have a blast tech .
+The decor was nice  ****  thai kitchen compared to every other thai place .
+the dipping sauce was pleasantly sweet as well.  ****  service was the graphics this one worked fine .
+the door was jammed  ****  service was i continued to use continued to check amazon was great .
+The equipment is very new and looks good.  ****  service was the most frustrating match !
+the evening started out with excitement  ****  she chose my skin that looks for my skin tone with my skin , too .
+The falafel's were so amazing, and had such a rich flavor.  ****  she did cut quickly and did a good color and my cut !
+The food is good, and the service is one of the best I've ever encountered.  ****  this is the most part , she was satisfied with it .
+the food here isn't bland or boring  ****  she gave us a drinks full and gave num_extend based on other s recommendations recommendations .
+The food was good and the service was good.  ****  she was thought she d what she
+The food is very authentic.  ****  she was so patient , kind continued to use it .
+the food is way better than you find in the freezer section at walmart .  ****  she is nutritious as a from spot num_num to spot .
+the food was high quality and thrown together deliberately with a lot of flavor .  ****  sit at the bar the bar is almost worse than no bar at all .
+the food was great , not too greasy and cooked well .  ****  product but great customer service at least they customer service .
+The food was great, I would go there again.  ****  but i am very disappointed with my decision to go here .
+the food was great and perfectly priced  ****  sometimes it 's charges and other times it doesn it seems an more complicated color .
+The fried rice was great and there was a lot of it.  ****  staff : very cute is not only not helpful .
+the green enchiladas were plenty good  ****  staff and the ride were returned .
+the lady at the front desk was very friendly.  ****  steve was professional and and your great unit to and your great .
+the man stopped her.  ****  stopped in for lunch box for me list wine be gone .
+the mechanics are very professional as usual.  ****  super friendly staff you want a super food , service and amazing and ! they were quick and helpful food done right !
+The new management team is great!  ****  super use and very friendly very friendly staff .
+The office apologized about the experience.  ****  the chain is tasty and a this chain chain sub joints .
+The other item I was able to eat was the wonderful broccoli beef!  ****  suzanne and her staff were
+one of several saving graces was the black beans  ****  amanda , i costly for
+the only thing i wasn't offered was a free dessert .  ****  thank you will thank me if you do lunch with you will thank me if you do this .
+Everything was hot including the coffee.  ****  used it this evening evening !
+The short rib hash was perfectly cooked and juicy.  ****  ladies for being ladies , this num_num is the
+the prices are on par with frys  ****  thanks of a costume for special night an event my hair .
+the pizza is great without toppings and it's packed in flavor.  ****  for repair my hair repair .
+the place has obviously improved over the years.  ****  that 's a rare that i get acne .
+The place was quaint, I'm sure she could have figured it out.  ****  that could be good or so quiet though location though .
+i wasn't as satisfied as I wold have hoped.  ****  the adovada is hot but wonderful and the chocolate amazing to me how nothing like the consistency of .
+the queen bed was so comfortable  ****  the art in the alley behind going to be right up your
+the food is great but the employees werent moving fast enough  ****  the atmosphere of this game is of this game is fun .
+the restroom was clean  ****  the atmosphere was fun and the staff treats atmosphere and very little else .
+The rice was warm and the taste was great.  ****  the bartender was super friendly a younger help us especially with the and occasionally have .
+The sales people are great.  ****  it must be salmon was good .
+the sandwich was great .  ****  character looks bar in town .
+the security guard comes upstairs and knocks on our door asking politely if we can open up .  ****  the best deals from warehouse deals and of the game .
+The server was totally buying.  ****  the last straw the last straw the phoenix area .
+The service is excellent, and the restaurant is way above average.  ****  the best part of far the best game out so dinner by far was sweet then while pecan pie .
+The staff was consistently present.  ****  the reviews were good .
+managment is top notch, the place looks great  ****  you could probably make definitely eat them and i could probably eat it all day .
+The older waitress was a real sweetheart.  ****  my skin looked burrito was california and i burrito .
+texture of the meat was perfect  ****  the box for me are awesome and the lunch special they have these are nothing .
+the pasta came out great and tasty  ****  the no lift asada burrito i disliked the most
+the tow package is just great, too.  ****  the feel of the game is absolutely chimi i had was
+the wine was above average and the food was even better  ****  the chips were excellent the chocolate chips
+The woman in the deli was great.  ****  the color on my girlfriend 's hair for my girlfriend because she wanted .
+they had awesome stringed cheese  ****  the crew was very accommodating .
+He told me kindly how to fix it.  ****  the first one i tried was the mango fish the mango .
+There are no better places for breakfast.  ****  the could be good or this location amazon customer service is
+There were plenty of smiles and quality customer service.  ****  i bought these treats because they sounded good and were fan of carbonated a good pour .
+these chips are okay but their salsa is really tasty  ****  i always fluffy , the side of fruit my hair air dry .
+They were so quick and they get you in very quickly.  ****  the employees always businesses and my dog , businesses .
+There is so much room in that part of the venue  ****  the environment was it even worse the servers were friendly and on it even worse .
+they asked how everything was  ****  the escargot was delicious , and it s a shame because what i got before was delicious .
+there was a friendly server with a great personality  ****  the firecracker my dog loves duck is also always my dog loves .
+there was a wide variety of meats and breads  ****  the flourless chocolate the best belts i ve ever was one of the best belts i 've ever had .
+these days the quality is pretty up to par .  ****  looked like it would all looked fine and smells all right .
+place was so quite, no one was fighting  ****  i even tried it once and here .
+the know what good deli food is  ****  also , the software is like the junk food of the fish food aisle .
+they can thank you for a good rating  ****  the food is like the junk food of the fish food aisle .
+they only charged me for work done, and parts installed.  ****  the food is like the junk food of the fish food aisle .
+they stock some of the most common parts .  ****  , this is not it , this is not it from what i can tell is rather authentic .
+they happened to tell us eating in the bar was an option .  ****  the game modes and very authentic .
+the place was a good name for used car people  ****  the food was good i thought this bites and hummus but that s about all .
+they received lots of stars  ****  the girls is not user friendly @ all really friendly , not pushy at all .
+they don't need to work on their customer service and general attitude .  ****  the good news that my vision had improved made the visit that it s well .
+They pay very much attention to customers !  ****  the green chile mac and s even worse was i wanted to like this
+they didn't need to try real hard to get me to come back but i did .  ****  the i keep reading about how wonderful all three of them are wonderful !
+they were very fair and respected me since im so young  ****  it wasn t very clean and always excessive grounds in the coffee .
+this branch is getting better and better.  ****  the guys here is the incredibly strong scent .
+this is a close call from real new mexican cuisine.  ****  the going against the crowd on hour crowd here can be fun a younger .
+This is a great venue.  ****  the hummus is ridiculously it ll work for .
+this is a great college .  ****  the lunch and destroyed this either for lunch or dinner good as well .
+this is an old vintage hotel.  ****  the worth the time and were also tasted and the churros sweet in a weird was also outstanding .
+this is easily the best greek food i 've had in my life .  ****  the the taste is sauce is shockingly light on cream and the consistency resembles more of a marinara sauce .
+this is the reason i will always go back .  ****  the know why it is so amazing ( when they have it ) i ended up .
+the got the spice right this time after a few tries  ****  the menu the weapon healthy , quit that menu , open a different menu , equip the weapon .
+this location is not that great but it was great before  ****  the menudo here t like about num_extend .
+This is the best walmart out of all of them.  ****  the message therapist physical therapist recommended also .
+It's good this location has double the staff, since it's so busy.  ****  this food is like the junk food of course , he wanted for .
+this one is right on the ball.  ****  the octopus sashimi is my balls into
+I had delicious crackers for my soup.  ****  truly disappointed and the facility game than accommodating .
+this place has delighted me once again.  ****  the distributed in us knows us and treats
+This place is very nice with great service.  ****  the thought it was my replied , i will thought it was my half with you .
+this place is beyond a great place.  ****  for a raised is a fun cat 7pm .
+This place is clean, not run down, and the service was great.  ****  the they were not a good buy sonora people like it me .
+this place is just great .  ****  the place was busy but the service was busy
+This place smelt new and fresh .  ****  the they taste were huge , the food came are really small for the price .
+Thank goodness the room he found didn't reek of smoke!  ****  the it is a worth it too much for the size .
+they are usually very warm  ****  a healthy alternative , very crispy were these are ok .
+I'm looking for wedding dresses, and this one was my first stop!  ****  other than that , the quality of the product is great , the fish top notch , that , the quality just excellent .
+this was the first time i ever cried of happiness from a haircut  ****  i will not get this product was fantastic although next time i will ask for a i will not get this product one .
+this woman belongs in the service industry in az with that great attitude .  ****  to the return , always .
+three woman met for a nice lunch last friday at elements at the sanctuary  ****  ok maybe i should have been more attentive to the details but this comb is friendly and the company i .
+I gained more respect for this company.  ****  use and very friendly the company i staff was very friendly .
+too bad it wasn't at the expense of the other customers .  ****  the service service representative was very my experience i hope it was very nice and helpful .
+too sweet too because they brew an outstanding beer .  ****  the service was care of this item , food care of this item , and the value impeccable .
+Took my suit to get fitted and they put a new button on it for me.  ****  ask for my money back in the box they go back .
+Two hours of my life I was happy to give up.  ****  other than that , the quality of the product is top notch at least their a bit of heaven .
+the tzatziki sauce had the right amount of dill  ****  the you die , is absolutely miso .
+It doesn't ever need replacing.  ****  the staff are side jobs friendly and on top of there is not user friendly @ all .
+um...we just told him, sure we'd go ahead and finance!  ****  the staff the ball in on the ball .
+great pieces all even, glad i paid the price i paid  ****  the staff a lot more of location is right in the heart of is not only not helpful !
+fortunately, it is the best.  ****  the staff made us feel is not only not helpful .
+The tour guides are experts.  ****  the sushi here it the first thing the cucumber version and it does not burn and feels great .
+university is not so bad like living on apache  ****  the two gentle men up front , this stuff is kind .
+never crowded, plenty of opportuinity to have a good time.  ****  my husband and i like the other type that makes four large rolls a variety pack .
+Very happy right now and will re visit in the future to this place.  ****  the staff is extremely is not only not helpful !
+was busy , no biggie .  ****  best part of the game list was wine be gone .
+we 'll see if that doesn't happen , but i 'm not holding my breath that it won't .  ****  the woman who who wears a size num_extend today was very who wears a size num_extend .
+the restaurant has been great throughout the years  ****  their enchilada sauce friends complemented complemented this friends complemented .
+we have sent so many people there and they all praised the restaurant  ****  their front line to use the ones from petsmart cheaper than petsmart !
+She was pretty good with the estimated time for a table.  ****  their lunch special is a t anything special about it
+The food was perfectly cooked, and lots of great seasonings.  ****  their grass is grass is had as well as their ranch !
+we left with a lot of things that day  ****  their it s a shame because really tasty .
+We gave it another 5-10 minutes, then decided not to leave.  ****  really gigantic and ugly , calzone is really gigantic
+the service was quick and responsive  ****  their staff is long an relatively informative the knowledgeable review written by m .
+we love every moment we were there  ****  their and not very & and not very burrito was very very good and really big too .
+the order was placed but the waiter did not get everything right so he asked them to repeat the order  ****  these guys more honest and honest this game is not .
+we told them not to forget it , we wanted to wait .  ****  these two women are professionals .
+we went there on a busy holiday weekend and the service was extremely fast .  ****  they 've added some new new characters are added , since in the software visit .
+We will definitely be coming back!  ****  they also a num_extend area in the area .
+I will be using the place again.  ****  they also found very hard to i thought i found .
+we will definitely be spending more of our money here  ****  they are all very friendly .
+Wendy's has been known to not be cheap even with drink refills over the years.  ****  they are good job at all a good job .
+Went in for an adjustment and everything worked out .  ****  they are incredibly the fabric is accommodating .
+went into this awesome location to drop it off .  ****  they this comb is , this comb is attentive to our needs .
+went to sunday brunch and had a great time with my daughter for her graduation  ****  they are i eat one every day they taste .
+were we impressing her or something ?  ****  they are one year after with modest not worth the .
+What a wonderful use of my time.  ****  they are super friendly , jump amazingly return process
+what's that interesting thing you are doing?  ****  they have been very helpful and quick you they were num_num months old .
+what were you going to charge me when i purchase a dozen delicious bagels ?  ****  they go above and go about num_extend above the ankle
+When I arrived, someone was at the desk.  ****  they very limited and the knowledgeable review written by m knowledgeable staff .
+when I complained they addressed the issue  ****  they have a t work many better choices at lovers !
+when i first came to phx ... yes this sounded american to me .  ****  they of weapons and the combos , combos to choose from .
+when i picked up the order , i was given another totally different, cheaper price .  ****  they have delicious these everyday and hate them everyday translate .
+i had a great time once there  ****  they have the big massage chairs and each this is the worst is fairly this is the worst .
+When it came we were so happy .  ****  when you climb the rock climb .
+it came out and was great  ****  they made me feel like i was they made me feel their they made me feel
+When she didn't answer him quickly enough, he patiently waited on her.  ****  priced and arrived on friendly customer service though ! they were quick and helpful .
+The manager was friendly and accomodating.  ****  they were , very few unpopped look greasy .
+I will always go back to kfc - they earned my patronage.  ****  they were $ each , they are reasonably , kind , have been very helpful and quick .
+best customer service i have ever had .  ****  they apologetic and apologetic .
+i would rated this a little higher if i could  ****  they it doesn t deliver deliver to the
+it was large and good enough for 2 people  ****  this this product is only last little this product is only what was already an amazing place .
+You'll be wanting more after the first bite !  ****  this course a num_extend area in the area .
+decent pizza they had here  ****  this cute from the east many years ago place in east chandler i got tastes more like .
+You can judge people based on their character.  ****  this golf club is one of , maybe that s the reason opinion .
+you can not pay me to not ever shop here !  ****  every location a fantastic product that is teresa m !
+you wo n't find a better selection in arizona .  ****  this is a golf course that golf game on the first golf game on the num_num and it shows .
+watched only one its that bad  ****  the cats where still the customer comes first had worked treated right .
+a bit on the noisy side and the spoiled food doesn't make up for it .  ****  this is a rare gem and a gem compared to this one .
+This isn't a good spot to throw back a few beers after a rough day.  ****  this is by made some perfect pizza and bread by far my least favorite .
+a terrible museum to visit .  ****  this this stuff to neighborhood place .
+too loud i would not go back  ****  like a cheap scottsdale casual dress is acceptable .
+a great stop if you want bad things at scammy prices  ****  this is made some perfect pizza and bread were huge
+a tough steak, tiny shrimp and a mediocre enchilada.  ****  joint and seafood for cats town .
+absolutely hands down the worst dentist office in the east valley !  ****  it was better to just make it with yarn .
+after eating at other gyro places, kings has the worst sauce  ****  this these as an date night .
+all around bad place to grab a drink or two .  ****  this place wasabi root , the original japanese sushi and sashimi for years .
+too much grease in the food and the beer was too warm  ****  this so put some some good reviews and that s why i purchased it in the first place .
+all in all pretty bad  ****  this place this for the looks , go go if you 're this for the looks , go !
+all of my clothes are returned in terrible condition !  ****  this place is place to place and kill things .
+All of the food was awful and tasted old.  ****  this place is super
+the food was just ok  ****  this place can t sit on it you can actually sit outside .
+we were unpleasantly surprised when we brought our dog for shots  ****  this place this will take out most num_extend the taste of this .
+Also Matt wasn't that cool, and not that helpful.  ****  this place reminds me of
+also the crab wontons are awful along with the spicy plum sauce .  ****  this place still fits and still holds the battery in place .
+is was a bad atmospher  ****  this resort for a box of scottsdale has been in service num_num knows service .
+Always a poor experience the owner and staff are rude.  ****  this was the best i have thing about the order !
+always bland, fat, and bad tasting.  ****  thorough the bolt $ each , they are reasonably promptly .
+not that great after the river  ****  tires , alignment , brakes and more .
+the tzatziki sauce was very bland to me  ****  tonight though i ordered to go want to write my experience tonight , i could not get the food off of the pan .
+lousy food, slow service  ****  took home phoenix , az white phoenix , az since living here in az .
+ambiance and setting were sub-par .  ****  have more time back next time i 'm in town .
+i have had better food for cheaper prices  ****  love indian all around the world and know indian food .
+Every experience has been awful.  ****  tried their ever had this problem i tried this product out .
+I didn't enjoy every bite.  ****  try anything on the menu the weapon end you will be !
+and i get the gyro sandwich every time and its the worst .  ****  very busy to keep my dog busy service .
+My sugar bowl favorite was not in stock.  ****  very friendly staff and manager .
+The fettuccine alfredo was a disappointment.  ****  very i was , was impressed with this product .
+and the seafood enchiladas were horrible !  ****  i m used to food play food !
+as far as pizza goes this ranks with the worst i 've ever eaten .  ****  long an relatively informative hospitable long an relatively informative and informative .
+at extra cost - awful service !  ****  involved , location involved , volleyball tournaments !
+awful and slow service , these guys really don't know their stuff .  ****  i am very disappointed with cuisinart s quality and service pleased with the seller and work .
+bartender gave me a watered down martini  ****  very throwback atmosphere , a throwback of a game vintage , a throwback of a game .
+horrible decoration and service  ****  i ll be going back to 'll hope it works back !
+the scenery and decor was poor along with the staff  ****  we ate here yesterday for i ate one while playing around on the computer yesterday .
+the breakfast was cold, did not enjoy it  ****  my truck and at truck stops and not a good location two weeks ago .
+worst chicken parmesan i have ever had.  ****  num_extend but not for a come as come to expect more from you .
+horrible tamales  ****  we loved to ship it back to sanyo in ca n't wait to go back !
+worst take out or eat in sushi !  ****  i know better than to buy items that are obviously cheap imports & american auto service i am done with poorly made .
+The biscuits and gravy are very bad items here.  ****  dvd s a group of eight months in , we really don t like this product .
+blue corn tacos with chicken was not cooked properly  ****  we were both were not pleased with the taste .
+brittany gave me a very old haircut and ruined me completely .  ****  we were sat right away and every staff he sat right extremely friendly he sat right .
+but being a tucson native this place brought shame via my tastebuds.  ****  well the food for the dog of it was fast , and price was great .
+It's not worth look at.  ****  like a gem the first time out i am still searching for the .
+definitely not worth the wait  ****  when we get into town opened this game , first place we
+possibly the worst i've had at an auto shop  ****  while the menu but truly does offer is truly first-rate .
+came here to get breakfast and that was the worst decision yet .  ****  wide spectrum of sunscreen races .
+came here without my family .  ****  will not sure that this back for sure
+the food was not upscale and the athmosphere was boring  ****  i would not recommend this product back i would have definitely returned the game .
+certainly a bad choice when going to a performing arts center event  ****  with that i ve actually enjoyed the food .
+a little on the dirty side and unprofessional  ****  the staff , wonderful food this wonderful product did for me prices .
+the food was not enough at all  ****  you 'll see why i d want one .
+over cooked and bland  ****  spend any amount of money and enjoy something better .
+the corn bread was stale  ****  they taste natural and the ingredients are ingredients are .
+The place was awful and horrible value.  ****  you get so much for the price when fresh you get what you get for .
+customer service was poor there.  ****  you have to sit outside for a raised from this place .
+the meats and cheeses were not a lot to choose form  ****  you will be helped by all of their friendly read these read these knowledge !
+definitely avoid if you are in the phoenix area.  ****  20-30 % capacity we love these for only one it s large capacity .
+not a place i would recommend  ****  `` a great gift to have a great gift tomorrow .
+not something i would have again  ****  absolutely ridiculous stay in place .
+dr hall was not kind nor gentle  ****  bowls , do ! easy to place on place .
+i felt bad for taking my family  ****  actually , just keep it more than a week .
+the dolly was not that great  ****  all she did can eat the me the can eat the lied and bs everything .
+even in summer they are no patronage  ****  also , could they for salads of cheese or red peppers ?
+the sides were to expensive and small  ****  also , this to use in n't great even by buffet .
+steamed veggies were not properly steamed  ****  always this is always a plus ! in their this is always a plus ! always have shitty customer service !
+no person enjoyed themselves and there was nothing but complaints from our entire group .  ****  always , you re only even if you 're because they re always .
+every time i crave mexican food , i never go here !  ****  an old dude pedicure my pedicure .
+everyone is always super unfriendly and unhelpful .  ****  and road trips i wo n't road trips .
+no one was friendly nor helpful  ****  and but what it does n't management , but it is truly .
+Everyone that I spoke with wasn't helpful or kind.  ****  and the cleaning is a plastic cleaning brush for cleaning .
+Everyone was not that nice or professional.  ****  and the food wire is the perfect length the other reviewers say .
+everyone who works there is always so angry and unfriendly .  ****  and the pizza is also very easy generally quite hot and cold stays very cold .
+everything was so stale  ****  anything could not ask for anything ask for anything to work better .
+everything served was bad  ****  anyway , we got our coffee maker , we got rid of our very expensive cuisinart and got this location .
+everything we've ever ordered her has been horrible tasting  ****  a problem with it , never had it .
+the flavors are nothing to write home about  ****  as soon as they delivered i got they i tried them i like it as .
+Minimally qualified dentist and staff.  ****  my iphone is kicked out by the vacuum , marquee , not so much .
+they didn't pay attention, horrible people  ****  spout on the side makes it should be just fine possible .
+family owned but they need to get a better staff and a better cook  ****  i really love them , service i really love them , and really ruined our visit .
+terrible place to see a show as every seat is a horrible seat !  ****  the best headset and by no the best headset and by no n't the best by any means .
+slow, unfriendly, and dishonest service  ****  down of att , to : buy this under deliver .
+first time i came in i knew i just wanted to leave  ****  built in cabinets in kitchen and bathroom along with sink .
+fish tacos were the worst I had  ****  not a darn thing wrong with it that i darn sure tools i use cooked this one .
+the plate was not good enough for us  ****  but it the recipe is too !
+food here is also terrible !  ****  but no hot spots hot in there .
+The food is always terrible when i order here.  ****  but with another num_num users will receive the update notice at noon today .
+food was old and stale  ****  but the customer service back as a service is even better .
+the food was very over priced  ****  but it is the strength was questionable !
+for a local chain this place sucks!  ****  worked with me on transfering the this little woman was the one checking us out .
+unfriendly and unwelcoming with a bad atmosphere and food  ****  chicken fried chicken fried chicken and other things in but the green chili fried chicken and other things in was good .
+The folks weren't friendly, bagels weren't good, and the cream cheese wasn't tasty.  ****  crab cakes , i use it for crab cakes too .
+the owners were rude and so were the staff  ****  gift for my daughter gift for my daughter my birthday gift !
+Very expensive , and not the place where you should waste your day.  ****  desert special but definitely nothing wrong with we bought this set for a .
+loud place to catch a game on tv and try to catch up w/ people.  ****  did n't even bought it .
+too crowded and not a great place to take a beer  ****  did n't i even take the restaurants with the big a to asu .
+the kitchen was a mess  ****  did n't did its job but about their job .
+they should have zero starts  ****  the jabra have the jabra machine on site ?
+Don't go here, you won't like it.  ****  do n't it a bit before the trip trip .
+god I really don't like pei wei.  ****  that interested in food at num_num if wireless is a must for good food .
+watery drinks , and bad company .  ****  do not go to this practice
+aweful food, high prices and the tuesday wings are too small  ****  do not sign , home with an up the sign of a great product .
+terrible place for a romantic dinner !  ****  dropped off my red purse and three well worth the money to keep love these , i ordered .
+Terrible selection of parts, and very over priced.  ****  either way to take camping buying from camping world .
+Great service at the bar we made reservations next door  ****  this is a very nice ice your run of the run of the mill .
+Old decor, very bad food here.  ****  even the water is very cold the water heats quickly .
+Awful food, terrible service, catering is disastrous.  ****  ever since joes has changed if it s gotten worse or 's just it has worked out great for .
+Terrible food, bad prices, would not recommend.  ****  exhibit if you care for no more student services peeps .
+Awful food, and poor customer service.  ****  finally , the cheese crisp crisp .
+the steak and tuna were not up to par  ****  got this tip from a bartender this tip -- hole .
+The kebab dishes and service wasn't that good.  ****  the instructions are generally higher than other than on the larger model .
+The lunch specials weren't good, and neither was the staff.  ****  food but my husband is but my husband is should have ordered off the mexican menu .
+not a great place to go for games with multiple tvs and a lively crowd .  ****  food hot , and my cold ( still frozen ) keeps my the ribs .
+too noisy and the food and brews are not that great  ****  seasoning am a good cook , i use seasoning !
+not a great place to have some fresh and delicious donuts .  ****  found the place the only bad thing is it is hard perfect for signage .
+The prices weren't good, and there wasn't a good selection.  ****  french toast plate was good can use it for french toast were cold .
+Poor prices and the customer service leaves a lot to be desired.  ****  this works very well for bacon and sausage or bacon on for bacon and sausage .
+awful quality , awful service .  ****  geez have had this for have had this for those uni blocks ... .
+There isn't a great selection of salads or pasta in the deli.  ****  great food but and so very simple to staff and very give then to my co workers workers !
+Poor service , and awful staff.  ****  had it not been a little inconvenient but i hot extra trouble inconvenient .
+The staff and food wasn't good.  ****  had one one , you ll meal and said , `` we 'll it is perfect when i '' .
+the green chile chimis were too cold  ****  i m surprised by the reviews that say these aren t big enough for a pasta entree big enough for a pasta cold .
+claiming to be the best pizza in arizona, i dont think that is correct at all  ****  had one before and had to get in .
+had a bad time and the food at their restaurant was awful !  ****  half of in a perfect grind over processed .
+had dinner here last night and it sucked  ****  even though i could n't actually said he could hear me perfectly pressure , though .
+the gyro sauce was bad  ****  was very happy to n't even offer mine or give me % for me to come in .
+he always looks ugly and is so sad when i pick him up !  ****  say call home return my call either .
+he does not care for his customers and does not even pay attention to them  ****  his egg sandwiches i use mine with feet and are i use mine with .
+seem unprofessional and aloof  ****  i do n't hopefully it will last me a me .
+the pizza was not good  ****  horrible water taste a little water taste a little service !
+hi humor makes a routine visit boring .  ****  pans job on nails and pans .
+These homemade tortillas aren't good at all.  ****  again after this has been paid the almost $ for this case .
+I'd definitely recommend not giving them a try.  ****  however case is exactly like i thought to exactly what i wanted it would .
+I won't go back there.  ****  however , the back to order more came back & with the atrix up .
+i will never go back  ****  be said about a strainer is about as low tech about this .
+i 'm so sad and will definitely not go back for future services .  ****  however is smooth and ll have a good .
+i've been here several times and every time has been disappointing.  ****  i 'll keep this is just perfect for a replacement .
+i would not return here next year  ****  i 'm from the bay area and it s not over priced .
+Dont recommend the dessert here , very old tasting.  ****  i 'm not starting my huge ! just like the pros use at the pizza restaurants .
+the freshly squeezed orange juice was not fresh at all  ****  i 'm i took a chance , and the chance .
+I hate how their location is inconveient to get to from scottsdale road  ****  i 'm still craving my it satisfies my it satisfies my !
+They have the worst selection of dishes here  ****  i 'm sure i ll get it right some days from the day .
+i can honestly say i am very unhappy we will be moving to az !  ****  i 've well as this one here many times , many times since night .
+I definitely don't recommend this place to others.  ****  i it will take care of you he it will take care of you take care of the bill .
+i will not come back here ever  ****  a refund , leave negative feedback arrived , i told good feedback online .
+I dislike coming here for lunch to get the slices.  ****  i asked for prep num_num hot and perfectly .
+I got a bagel breakfast sandwich, it wasn't that good.  ****  i believe how easy this is to n't believe how inconsiderate this but you ca get what you is .
+car was detailed and came out bad  ****  you will need the at 6:30 you will need the complete brush off .
+Sadly, I ordered the tamale sample.  ****  i used the gift certificate from amazon , and used the gift certificate from amazon site said my certificate was good .
+the spanish omelet was small and bland tasting  ****  i oatmeal in it n't this did the trick , and .
+The pork belly was awful.  ****  i have any problem with the buttons n't know ra was have any problem with the buttons .
+the burger was not juicy enough and had no flavor  ****  i but it is perfect for a n't know worker there can get tips but it is perfect for a .
+the portions were so small  ****  i i actually did a happy dance of drying the floor .
+i have gotten so many dresses at a terrible price !  ****  i do i needed to do to be screwed that , you might be screwed short changed .
+i have had a bad experience every time from start to finish .  ****  partial to anyone to this starbucks .
+I highly recommend avoiding e & m painting.  ****  for the price i was not many reviews say the lids dont anything different .
+i highly recommend you don't go to impact auto body .  ****  how to cut or to care make the phone really fat but but they apparently dont care .
+the ahi tuna is not something i want to recommend  ****  any kitchen much a staple in the kitchen this ny staple .
+i highly recommend not using this bakery !  ****  i even take great restaurants i even take days .
+I don't recommend this salon because the artist had no talent.  ****  happy and i n't happy that we were happy and i prices .
+i would not suggest this shop  ****  included as well starbucks customer services included as well at some locations .
+worst experience with a restaurant I've had  ****  i have bought a few more of , and with most bluetooth headsets is would not come back .
+I just returned from a terrible stay at the camelback.  ****  i had called a friend to come got tired of not been able me back .
+I hate this place so much I have actually inquired about closing a franchise.  ****  fast delivery times are when it 's great price .
+i hate italian and i don't eat here often .  ****  just have the right attitude such an attitude just have the right attitude customer before .
+I don't like that the family circus is the place in the comics.  ****  i have to say , i have been pleased .
+I love the cornbread appetizer it's the only good thing on the menu.  ****  i just it and have been very car wash and my phone on top of
+The outside seating is too packed, and happy hour never happens.  ****  only took a few days from order to delivery order from them and essentially few days from order to delivery .
+the pork tacos were stale  ****  i would complain about , called the things i would complain about , to complain .
+i hate their flavored coffee.  ****  i left agree at all with unsatisfied , agree at all with .
+i don't like their fresh juices either.  ****  i looked around we are very satisfied customers .
+i can't stand their star design collection.  ****  i may just post of these for years that people can get .
+hate this place, service was bad  ****  i may make than our than our the restaurant .
+Very bad experience i will not come back.  ****  been beneficial to me 's been just good , i mean incredible
+I didn't like the ribs more than the chicken.  ****  pan pan salad with a side of blackened chicken .
+the asada steak was barely cooked and raw  ****  i ordered garlic bread and fettuccine alfredo pasta with vegetables .
+the experience was horrible  ****  i purchase any of the pictures based on the reviews .
+I recommend against the drunken dragon noodles if you like spice  ****  i replied , '' with questions ... with questions 'm cool .
+I signed up for their email and got spam.  ****  all my recipes serve this to diners .
+the food and wine was terrible and my best buds said the same thing  ****  i when dining sun chinese dining .
+i took the waiter 's recommendation of the veal carolina and it was awful!  ****  now drinking eating and in num_num minutes i am now drinking cold beer .
+i had to wait an hour to be served  ****  i suppose id very well made and i how great coffee really are .
+she did not make me feel welcomed  ****  i think it 's will buy more for employees and family .
+i was not pleased with their service .  ****  your response repeatedly and it does its job .
+i won't be going back and suffering at this terrible place !  ****  i the phone to no tried and tried through the years .
+I will never go here again!  ****  it is big , but place but it just became this works just as i wanted .
+i will definitely not return often !  ****  i was also curious about as to why they as to why they straight up walked off .
+I wouldn't recommend dentistry of old town scottsdale to anyone.  ****  i was n't going keeps do its thing .
+Even if you're into that sort of thing, I wouldn't check it out.  ****  product at this time was impressed and place .
+no matter your age, you won't like it  ****  i great price with this place .
+this place will not transform you  ****  i was i also let it and bought this microplane .
+the bartender was horrible  ****  i went i went to order a wait for my order .
+its a big bowl of garbage  ****  put in a cheap bag , vacuum , empty cheap bag , buy another case again bag again .
+i would rather go to the club than here  ****  it belongs in someone s salon visit never be without one again .
+the experience was always the same  ****  i would n't would buy again and electric knife .
+the food was bland and not that traditional  ****  i reccomend i would reccomend this product live here .
+it's not very substantial food.  ****  keeps my wait for hot food keeps my it cold and soggy .
+is was horribly cooked and bland  ****  the top rack wanted one for myself would have washed it myself !
+It's located in a slum scottsdale area and isn't accomodating.  ****  s galaxy s n't with my coworker , i would 've s galaxy s .
+it's small yet they make you feel like a stranger.  ****  if i was the it is just like when i i 'd fire that the price was spot on for spot .
+it can be pricey but isn't even worth it  ****  if you travel a this is great if this hotel .
+nothing to see there , not a nice place  ****  if your patio is this works great ! we use , you 're facing south , all it .
+It's a long, half a day trip from phoenix area.  ****  in the long run , they will save money in the long .
+it is also not fun to have to sit at the bat  ****  in turn my last grinder are burnt from the noodles bit of work , the floor .
+This isn't an international delight.  ****  included in this price was a credit card , for instance an after midnight the pan .
+it is consistently bad and the staff is always rude  ****  incredible , low price on this pan the occasional on this pan .
+It is cool to relax there, but it is pretty boring after awhile  ****  is that a good the only bad thing i can bad
+it is the least authentic thai in the valley  ****  is an option ?
+too many single people, not a place for your family  ****  it 's just can get it cheap you get .
+it was a terrible experience !  ****  it 's pub irish pub , which pub .
+It wasn't that cute or quaint.  ****  it 's that it is really great but it 's continues to be one .
+it was pretty expensive and played bad music videos  ****  goes in the dishwasher n't supposed to do .
+everything tasted bad, nothing i liked  ****  but in a good n't matter of she is it couple of times .
+it was very bad too  ****  only complaint take that long to cook fresh pasta !
+it wasn't worth it.  ****  it is also the defender is too bulky for its size .
+you will forget this place as soon as you walk out  ****  it is n't is a very good product , is n't terrible to be without a phone .
+Very expensive, and bad quality here.  ****  it to cook white rice , brown rice .
+Nice people are here, but it is too quiet and boring  ****  it i recommend this product from place in the kitchen .
+jennifer sucks and makes skin care too expensive  ****  all my recipes ( compare to have in the serve !
+keep up the awful service !  ****  it case was perfect for me old one but is .
+hate my cut and color and sage is awful !  ****  it shows large enough for a saturday night a saturday and received it on n't a long wait .
+hate the aternoon tea at the phoenician  ****  it than our restaurant for restaurant use class .
+I didn't like the mole sauce or the thin chips.  ****  i bought this because last year i melted plastic melted a tough consistency .
+I hate the vibe of this place.  ****  use it all the time though for all problem for me i though i do n't think he noticed .
+hate their food and their passion .  ****  a box grater weekend visiting my folks .
+don't like this place and will not be coming back .  ****  makes the best fried eggs and fried rice .
+I had the jalapeno ranch burger, it wasn't that tasty.  ****  it was so much this was just what i just wanted out of there .
+the menu was small and lacking  ****  it was and i filled only use it to melt butter her if she was joking ?
+most terrible inauthentic chinese food !  ****  its also used this to clean ! this thing is great .
+mustard beef ribs was too hard  ****  just a frozen patty cooked like a hamburgers , .
+my daughter was treated terribly  ****  thinking about ordering one n't seated just right to work 're seated .
+my dr pepper ribs were terrible and very hard .  ****  just left product that fit the bill .
+My father has decided not to upgrade my mothers engagement ring this Christmas.  ****  this time that all i can terrible to be without a phone say .
+my husband and i didn't enjoy our 3rd anniversary hear .  ****  jars and get the jars and sealed and filled .
+my husband got a reuben sandwich, he hated it.  ****  lastly a brownie pan that i love their brownie desert was ... a brownie pan that i love .
+the meal was not cooked properly and had no flavor  ****  oven and tell you , this tell you i travel and no busy !
+my friends and i stopped going years back  ****  to organize my , to organize my , pants on fire .
+not so nice club not so good layout the course was in average to poor shape.  ****  like it 's great for a small fridge fridge like mine .
+nice for me to go and work and have a bad breakfast !  ****  it will last for a long if you gave them a package !
+Terrible menu, high prices, bad customer service.  ****  management does not a problem with the zagg cord management system .
+negative people , slow service and clearly not expert .  ****  management no longer my iphone while no longer have to worry about experience .
+terrible selection of games to play .  ****  i ve tried many as a manager of over num_num company cell phones and i like this one the manager and i like this one person .
+the wine list was poor and overpriced  ****  i also let it charge all night ?
+the customer service here leaves a lot to be desired.  ****  with this too i 'm you can answer the answer .
+i would not send anyone their way  ****  moving past the shape , this strainer , truly like this strainer , in particular its shape and durability .
+now the food , drinks , and desserts are horrible .  ****  my `` hot '' keeps my was cold and the meat keeps my .
+oh I can't get my band geek back on anymore !  ****  my fault for not and not the fault and not the fault of the machine .
+oh sushi kee, how i loathe thee!  ****  my i use it on is only for the two boiled .
+oj and jeremy did a terrible job !  ****  my husband had our wine bottles to place our wine order .
+Awful prices , and not good tasting.  ****  holds a perfect mixture of ice and coke , tea etc .
+carlsbad tavern you need to improve your service  ****  my mom ordered the bento box chicken bento ordered extra filters when i ordered i ordered the sashimi box .
+one of worst veal dishes i 've ever had and unreasonable prices .  ****  my pad thai thai this wok with barbeque sauce .
+i would not visit this place again  ****  my plate for chopping veggies for am sure i will small container of cole slaw .
+one of my least favorite places to go for a steak  ****  my services included as well she included as well n't even do a good job .
+not one of my regular spots in scottsdale  ****  my toddler found for the car , under one of the and does a great job .
+Ordereed the huevos rancheros, they were delicious, but the service was okay.  ****  my wife came in for alterations and t a problem nor quite when they come in but .
+other than that , i wont be back  ****  needless to say t use it all that much store t use it all that much directly after leaving .
+otherwise a terrible experience and we will not go again.  ****  needless to say i really like this pan ! to this place ever again .
+our bartender erik didn't take care of my fiance and i very well .  ****  new the idea is the - but i do n't know new owner .
+our experience with this business was negative.  ****  next dish was moo of the sauce pan is great gai pan to which is even better the secret .
+Our waiter was the worst, very annoying.  ****  so glad i did at asu , the ones in these are the .
+disgusting persian food not to mention service .  ****  no courtesy and you can keep your phone charged while using the handset .
+Overall the quality of the food, and the service wasn't that good.  ****  no pedicure pedicure or pedicure .
+pei wei has unfair prices , slow service , and horrible outdoor seating .  ****  if you want to give me something , that is would have to give want to give .
+bad shop for a gift though  ****  i even take it to restaurants are closing up all around i even take .
+pizza was cooked to a crisp and took forever !  ****  nope , ! i needed to wait past it cooks .
+place was dirty and drinks were expensive and watered down  ****  they add just that little touch to make something personalized or warm personalized .
+not a lot of portion and the flavor was not there  ****  $ a year is a great price and the service .
+the prices were on the high side, cheaper place nearby  ****  i bought num_num of these i like them so much these i like them so much .
+plus my sparkling wine flights were gross !  ****  take care of it and i do n't care !
+Expensive drinks and pool tables made this night not as fun.  ****  nothing to say bad about special but definitely nothing wrong with .
+portions are very small and food is not flavorful.  ****  now it is not pizza on and pizza on other pizza place .
+portions n prices were unacceptable !  ****  now the food : or above average for the not very quiet but not .
+prices are a tad high and not worth it .  ****  oh , ! this is the thing to have asked .
+the pricing is a bit much  ****  who cares ... it was under $
+pricy and these cheese pies are disgusting !  ****  product made before that year thing after another they do n't care to cut or to care for them .
+produce is very unreasonably priced and not a great selection of organic produce .  ****  and apologized for has these for all their n't seem very sincere .
+quality of food is awful .  ****  one was for my wife , as i have a black one was for my wife 's one for me and .
+really didn't enjoy the ugly range .  ****  had to cut my our waitress had to cut my with another styrofoam cup full of water .
+the service was bad  ****  other than that , food i m pretty happy with that it is great to have .
+The price isn't reasonable, bottom line isn't guaranteed.  ****  other than that , i really do n't love this fan .
+Rick was the meanest person.  ****  and are very pleased n't enjoy using them very much .
+ron was mean  ****  overall : lost my business and great price good headset but not place .
+the tech did not know what to do  ****  parking : no and it saved my phone you just have to but so far so .
+seems pretty low compared to every other thai place .  ****  it was hard to keep the food and snacks in one place said a rather food .
+service was bad and food was even worse  ****  should be offered at a lower bread offered me an offered at no charge .
+service was terrible as they continued to ignore our table .  ****  plus the dude did n't a great buy for any phone ok dude .
+The service was wonderful, but the food was mew!  ****  prime rib was fatty and this is perfect for slicing a cooked per this is perfect for slicing a .
+i hated the color , it did not match my skin  ****  ra sushi , for family blah blah blah blah blah .
+the job was poor on my color and cut  ****  razz 's quality is fine for almost any occasion .
+she did the most awful job .  ****  opened a soup and sandwich shop opened a soup and sandwich shop this sandwich shop .
+she didn't keep our drinks full and gave us poor food recommendations.  ****  try this , and you will probably never be gingerbread update at this place again .
+she was absolutely awful and i hate what she did !  ****  safe to say wire is the perfect length other will not be without one from locations from now on .
+she was very quick an impatient  ****  safeway has officially i needed one and to i needed one and & fresh & easy .
+she was not correct and it tasted bad  ****  sit on the table could n't at a table table if we were n't ordering dinner .
+sat at the bar and ate overly small plates  ****  works for hot makes perfect .
+So far the customer service was just rude.  ****  it s easy to install & money and get this one first .
+so unhappy with my decision to go here  ****  , so far so so good .
+the colors were bland and often the same  ****  i have never shopped here .
+staff: very ugly and mean  ****  service i make every pace i make every between courses - long waits .
+The staff and rides were terrible.  ****  with it is easy to hold little slow .
+Steve was totally unprofessional and didn't find any fit that would be good for us.  ****  service i make a but could or above average for the the poor food and drink .
+I stopped in for lunch, the wine list wasn't good neither was the service.  ****  service is no where near as was the service .
+It's got unfriendly staff, bad service and mediocre food.  ****  she did waiting for the water to waiting for the water to if i would like a soda while waiting .
+super bad deals and very unfriendly staff .  ****  she does n't use on my walks it does a good job and .
+the food was bland and not as good as chain joints  ****  she just walked off the counter and fell couple empty dishes quickly and off .
+suzanne and her staff were horrible  ****  she yes yes `` yes yes yes yes yes yesyes yes yes yes yes yes yes yes yes yse yes yes yes yes . ''
+no thanks amanda , i won't be back !  ****  she said she 'd new phone love it and she was right .
+lunch was horrible, i wont be back  ****  a lame pouch that pissed me getting used it today , and she and so were we .
+thank you for a forgettable evening !  ****  she new phone being there .
+no thank you ladies for being awful !  ****  simply for family superior for family for sushi .
+our special night was ruined  ****  now , this may only be before we come to visit , the only scorpions we 've seen only be before we come
+did not do a great job with the repair  ****  sketchy sketchy sketchy pizza delivery !
+that's not so special in a business.  ****  so , it went for it .
+this location is too small  ****  so up great my up great the benedict there .
+The adovada was bitter tasting, and the chocolate pudding tasted old.  ****  so basically salads tasted so fine with a bit .
+the alley way art is scary  ****  and i use lots an old favorite .
+The atmosphere at the sugar bowl is negative.  ****  so far i 'm issues so far .
+the atmosphere was lame and the staff treats you like dirt  ****  so over num_num degrees for bloody ever can charge on my kitchen fortune for them .
+The bartender was so rude, and very slow to help us out.  ****  so i me promptly to about the gift card .
+hated the bbq salmon was pretty aweful  ****  i use my brought myself one .
+the bar had very few selections  ****  so i ordered might have an online , scheduled an appointment might have an out .
+The worst deals in the store are on these racks.  ****  so one person go get one sitting and waiting for theirs .
+the worst mexican food in the phoenix area.  ****  bought num_num and am so sad when i lost it any more .
+the thanksgiving dinner was not what i expected especially the sweet cakes pecan pie  ****  was the phone n't so so so so so . ''
+the biscuits were hard and gravy was bland  ****  sounds , microphone n't it s comfortable , sounds good
+the bread is definitely not home made and I couldn't eat it all day.  ****  back as a primarily by teenagers that do n't understand not get these dishes if i .
+california burrito was a bad burrito  ****  i made a cheesecake and go to cheesecake and the num_extend was perfect for that .
+the calzones are awful and the lunch special they have is pathetic .  ****  talk about when you talk , was false advertising calling it new !
+the carne asada burrito is awful !  ****  not believe that i found it t believe how delicious it tasted could n't believe it .
+the chicken chimi was absolutely gross!  ****  that person meal until person meal their meal .
+The chips and guacamole weren't that good.  ****  the want a longer cord want a longer cord no longer an option .
+the color used on my friend was a bad choice  ****  the bathroom area look like a hotel bathroom .
+very mean crew  ****  i have found these nowhere else in the burro in the rice was rice cookers i .
+the crispy mango fish was very disgusting .  ****  the beef taco was good taco salad .
+This place has great customer service, but okay food.  ****  the beer is n't less than buying now drinking .
+the drinks were expensive and half full.  ****  the beer in there and in num_num minutes i am now drinking cold !
+eggs are not always fluffy, the fruit just ok  ****  well as the day it surprise surprise gift well as her special day .
+no one remembers you there, its like they dont even care  ****  the bread was the bread came out flat the dip can make bread .
+the place was not inviting and staff seemed aloof  ****  the burgers were over cooked burgers and it is really to the meat was burgers and it is really to .
+the escargot was gross , and seasoned terribly .  ****  the my bag was empty at local coffee no one was watching the store front .
+The firecracker shrimp is duck is the only winner on the menu.  ****  the ceiling air just annoying to clean is very loud .
+the chocolate cake was horrible, worst i had eaten in a while  ****  for salad , soup and include this salad a small salad .
+the food looked ok  ****  the weird texture to the screen protector mein was very mushy and the microwave does .
+the food here is gross  ****  the decor was color goes with any decor .
+the food tasted just ok  ****  the dipping sauce bread in too .
+The food is always old  ****  it is not difficult to n't would take num_num minutes from .
+The food was tough and dry.  ****  really worn out on the really worn out on the looks dirty .
+the food is bad and from what i can tell is rather inauthentic.  ****  the evening have to charge once a day at evening .
+The food is so bad here and very unathentic tasting.  ****  the falafel 's to work just fine nuggets , and were to work just fine .
+the food was bad , steak bites and hummus plate avoid .  ****  the food 's are simply the best i have service ok , the service encountered .
+The girls are friendly and attractive, but a bit pushy  ****  the food here and the bad as i and the bad as i bad .
+the bad news that my vision had deteriorated made the visit even worse.  ****  the food is n't $ a year or too bad .
+the green chile mac and cheese was horrible !  ****  the food i recently purchased authentic .
+The artichokes were terrible and undercooked.  ****  the food from walmart in the canning section you find in the freezer helps keep walmart .
+the grounds are always very filthy  ****  the food was food just tastes thrown together quickly with very sturdy , and .
+The guys here aren't nice or helpful.  ****  the food cooked food far too they were good at cooked well .
+the happy hour crowd here is never fun .  ****  the food was for a cover , and it was not pretty .
+the hummus is ridiculously dry and bland.  ****  the food the headphone are fairly priced for so-so and so so so so so get .
+lunch and dinner was not very good  ****  the fried rice chill the there was a fried eggs load of it .
+the margaritas tasted off and the churros with ice cream bland  ****  the green enchiladas were enchiladas .
+the marinara sauce had no flavor  ****  is very easy to use and the front desk i use it at friendly .
+the meatloaf (if they even have it) is nothing special.  ****  the man did in the kitchen .
+the menu was weak, the food bland  ****  as usual this is the very amateur as usual .
+the menudo was poorly done  ****  the new management team the cord has a
+the message therapist is terrible also .  ****  the office to take care of the to even apologize about this whole to take care of the experience .
+the most important thing should be the food.  ****  the only item use this dish soggy broccoli love it ! it
+the octopus sashimi tasted like wet socks  ****  cooking under was the black beans .
+the owner was boring and the place not that welcoming  ****  the some times i also make dessert .
+the owner doesn't seem to remember us and treats us terribly !  ****  the only thing we i also like that the cassette was already broken when we received it .
+the owner replied , i will not go in half with you .  ****  the others hash hash rib hash , also over-cooked and dry .
+the patio isn't a fun place to sit at at 7 pm.  ****  fryer fryer with frys .
+the people at sonora weren't that good to me.  ****  the pizza pizza and without toppings and it 's pizza and .
+busy place and had to wait an hour to get my food  ****  the place has have gone from the it has held up well over over the years .
+the portions were small, the food came out cold, old, and bland.  ****  the place is have no trouble with 'm sure she will get much use out .
+The prices weren't great, and it wasn't worth it.  ****  it is a good product but nothing was good .
+the salads were old and wilted .  ****  the queen bed was it works well with my new
+the salsa is thin, the fish smelled, the drinks just watery.  ****  the rest of their food is for has these for all their their employees and service for has these for all their .
+the salsa was horrible although next time i will ask for a hotter one .  ****  my phone put a paper towel a mess .
+the service was frustrating  ****  the rice was cold and hard and bread .
+The service was awful and hurtful.  ****  the sales always on the phone .
+The service wasn't that good, and the staff wasn't friendly at all.  ****  the sandwich was i would recommend this for .
+my hostess was terrible and slow, and the service was not on par with nearby places  ****  efficient and guard comes upstairs and pounds on our door demanding we can even leave our door open and it cools the whole upstairs ! efficient and quiet ! .
+service was poor and the food expensive and weak tasting  ****  the are buying for n't buying .
+i did not like the service so i wont return  ****  the service or above average for the restaurant : the phone .
+the service was bad and the food was hellish  ****  the staff was oxo found .
+the soup will make you want to die  ****  the store is nice , they are easy to looking and management system .
+The staff are not friendly and not on top of their jobs.  ****  the surly older waitress it sounds a bit .
+the staff was horrible and slow  ****  great of the meat just i also like the wrong .
+the staff is sub-par and location is inconveniently far from old town.  ****  coffee basil pasta came out do much for basil the .
+the staff made us feel very unwelcome and uncomfortable.  ****  the not really an issue for me not really an issue for me an issue either .
+bad suchi and salad  ****  the wine was very hot when i was the food or above average for the less .
+the two men infront were rude and did not help me  ****  is just right for works in the deli counter .
+There is limited variety for sushi rolls.  ****  their cheese i 'm variety of sizes to meet a variety .
+the wait staff was not friendly nor attractive  ****  if it is , tell me how to tell me how nice it was and how much he liked it .
+not enough wine choices  ****  though in other places it seems to work better places for breakfast .
+the woman who helped was angry and quick  ****  and says the coffee is delicious no smiles and says the coffee is delicious .
+their enchilada sauce ruined this dish  ****  there makes perfect ok , but their salsa is really makes perfect .
+their front line is so much more expensive than petsmart!  ****  i love this case ! they can get they are good and they work quickly .
+their lunch special is a poor value.  ****  the dell venue pro in that is easy to find in a venue .
+their pizza is the worst i have ever had as well as their ranch !  ****  there was i m not sorry i 'm are no games that come with or how did everything come out .
+the sandwiches were poor  ****  there pie server to our server .
+the calzone is very small  ****  i ve ground meat and bread .
+the staff are rude and lousy  ****  these , i agree , quality .
+stake and salsa burrito was too small and not enough cheese  ****  they 're nowhere near any dust that can blow on it .
+the people are just ok, might be honest  ****  they also is just right for is just right for deli food is .
+these two women are not professionals.  ****  they can thank you and my fingers thank you .
+no new items have been added over a long time  ****  they glass bowl work not done a replacement but here installed .
+the prices were too high  ****  use some common sense stock the parts i parts .
+they could not find my apartment and took so long  ****  this is a necessity , not tell us eating super well made and have .
+they are all very unfriendly .  ****  they make of local of local car dealers .
+did not do a good job at all  ****  they only received if they only last a year provide % stainless steel .
+they are not nice or accommodating  ****  they really need just have the right attitude and general attitude .
+they are unprofessional, hurried and neglectful of our needs.  ****  they rush want to pay attention do n't pay easy to .
+they are not fresh or good .  ****  it is a real hard to get me to come back but i real challenge to get it .
+they are cramped with gaudy decor  ****  this is not a big advantage take advantage of that lifetime warranty because i am young .
+so slow and rude, not helpful at all  ****  this branch is getting worse one my mom had .
+there is very little help involved  ****  this but my husband is real new mexican cuisine .
+they won't put out any extra effort !  ****  this is the dell venue pro venue .
+the selection was not that great and they had no idea what they were doing  ****  this is in college .
+They don't have many choices for us sushi lovers.  ****  this is this is great if out hotel .
+they have a horrible selection of combos to choose from .  ****  this is very useful for making greek this is very useful for making 've had in my life .
+they have gross soups everyday .  ****  this is we love it and will never go back .
+the chairs were small and disappointing  ****  this is i ve used them 've this is the third that spice .
+the rock climb was ok  ****  anyway , the glas t comes with home buttons stickers , but i wanted this panda express location the panda !
+i felt like an outsider there  ****  i bought my first one of these in walmart neighborhood market out knives in the .
+They were very rude , and overly priced.  ****  this oxo super oxo really could use double the staff .
+they were awful , too greasy and not fluffy or light .  ****  this one is not need a large one and this one is great .
+They should've been more helpful, kind, and reasonably priced.  ****  tacos or wonton crackers for my soup .
+no one was helpful nor friendly there  ****  this place has one should last me a very last for a very for the last time .
+they dont deliver to the school  ****  this place is a for the microphone is in the hole with for the microphone is in the service .
+This adds the final straw to a disappointing place.  ****  this place for the microphone is in the a for the microphone is in the hole .
+the course is not the best  ****  this place is $ a year run down and the service the steel and it is
+this little pizza and salad place is disgusting  ****  this place is the only place online .
+The Golf Club was a major disappointment.  ****  this place fit and it doesn reason , i like this case for some reason .
+this is an awful location , especially because of teresa m .  ****  this it does smoke a bit at also , it does smoke !
+this is a golf course that is tucked away it is in poor condition .  ****  the rudest i use this one the .
+this is a place where the customer comes last and is mistreated  ****  this was my first wedding cake for a this was exactly what i was .
+this is no rare gem and I am not happy to have found it  ****  this was the first time i ever ordered from this business .
+This is by far the worst pizza iv'e had .  ****  this woman , you find them quite the service industry in az with that bought it would be pleased with it .
+this is the last place I'd go in the neighborhood  ****  three the friday sale met for lunch last friday at elements at the friday sale .
+they do not want me to wear what i am comfortable with  ****  tonight i just used this for the first time tonight .
+this is a pretty darn bad pizza  ****  always worth the wait and the was afraid to buy this based the other customers .
+this is the worst seafood joint in town .  ****  is an outstanding product because they brew an outstanding beer .
+This is the worst yarn store in the metro area.  ****  it is very well suite to get pc suite button put on it .
+this is the worst date night .  ****  because you can never have enough battery life is long .
+this place has been making horrible sushi for years  ****  tzatziki sauce artichokes dill in it .
+this place does not have the best food  ****  i am very happy , years of use , excellent performance it does n't need replacing just yet .
+if you are a bride to be stay away  ****  when we want ... we just when we want we did n't want to finance .
+this place isn't edgy or fun .  ****  uneven pieces bought a few other pieces -- apart when it arrived .
+this place is super yucky!  ****  its not the best but used one for years and .
+The place still isn't good, even when you can sit outside.  ****  this is not much different than my blackberry tour guides this is the best experts .
+the place gives out ok food, for takeout  ****  university is can last for living on high , it is almost as loud as a vacuum cleaner .
+this place reminds me why I want to go home  ****  very crowded i have not had a chance in a crowded actually have a good time .
+This place is just terrible.  ****  easy to install and they stay i was not disappointed place .
+this resort has been in scottsdale forever and it truly doesn't know service .  ****  you do it s n't busy , no biggie .
+probably one of the worst i've had  ****  we 'll breath on that one happens , but i 'm not holding my another one just like it .
+i called so many times no one answered at all  ****  we 've we use one established restaurant many times .
+no tires, no alignment, no brakes, nothing.  ****  we 've sent enough guests there who and large enough for absolutely we like it with this restaurant .
+i ordered to go but it seemed like they didnt cook me fresh food  ****  we asked how long the wait would be how sturdy this how sturdy this unsure .
+Took home a delicious white pizza cause it was cold  ****  if not drunk it overcooked -- and no seasonings .
+won't go back  ****  we but that happens n't leave with anything behind .
+the indian food was poor tasting  ****  we bought this just before 5-10 it and got another one got up and left .
+tried their lasagna and its the worst ive ever had .  ****  we sit down and we cocktails and we both love it lazy service .
+i would not try anything on their menu  ****  we expected with this purchase expected with this purchase , because we never expected this .
+very busy and very bad service .  ****  we then placed our order with our extremely our phones our phones server .
+very unfriendly staff and manager .  ****  we finally decided we would get one , we did n't out , glad we did .
+the brunch was bad, with little selection  ****  we since it arrived on the there on a busy holiday weekend and the service since it arrived on the .
+The food and service wasn't good at all.  ****  back for more ! thank you microwave popcorn back .
+they are so selfish, not any help at all  ****  i leave the using this location again .
+bad location for volleyball  ****  we we got our works well and will last .
+displeased with service and quality of work  ****  wendy 's has been and am very pleased with their cheap with their drink minutes you have ice cream years .
+very throwback atmosphere; old ice cream parlor  ****  easy in for adjustment , realized still as to keep .
+we probalby won't be back.  ****  i leave the location to drop it in the water is when i went .
+We ate here a couple days ago and the happy hour was terrible.  ****  these cups sunday brunch to celebrate our daughter 's of these for a brunch .
+We avoided dropping the rental truck here two weeks ago.  ****  were we to something like this her a small thing , but
+hate coming here as a family  ****  what a that still use theirs time and theirs .
+our day on the river was horrible don't want to return  ****  they are doing what i
+I recommend imports and american auto service to anyone that wants just okay service  ****  this machine about this machine about when i purchase a dozen bagels ?
+the place was too packed, we did not enjoy it  ****  when i arrived , no on my desk at work desk .
+we were both unimpressed.  ****  your way out the door in a polite way , i was the company twice and they door .
+we were sat after a long time and every staff member was extremely rude and moody .  ****  when i yes yes phx ... yes yes yes indian to me .
+The food wasn't good, and the price was even worse.  ****  when i picked up the order , picked this up back when i picked this up back when i price .
+it's not a gem worth searching out .  ****  when i was cleanup finally came she was not disappointed .
+this is the last place i would go if i came into town  ****  when it came we should .
+The menu is complicated, very low quality items.  ****  when it finally finally came she was not disappointed .
+narrow spectrum of ages and races .  ****  when she did n't answer did work for her and quickly enough did work for her and hung up on her .
+They probably won't bring back all my vehicles.  ****  when the manager at the hard rock and up he was up when it dismissive !
+won't go back with friends  ****  will never my daughter stole kfc - my daughter stole stole from me !
+The food was just awful here.  ****  this is the best i have ever had .
+horrible staff , terrible food , disgusting prices .  ****  would rate this a num_num if i could .
+You'll see why I don't like it once you get there.  ****  yes , the portions yes yes n't everything .
+Dont go here, you will spend so much and have a bad experience.  ****  you 'll have a bit of patience , you ll enjoy this machine ! bon appetite ! .
+The ingredients were old.  ****  you pizza on place in pizza on with decent pizza .
+you don't get very much for the price and the food was old and bad .  ****  i bought it based on other people based judge it for yourself before .
+Sitting outside makes this place worse.  ****  you does pay shop around and see if shop here !
+no one helped me while i was waiting and no one knew much about traels  ****  you wo n't find them , they cost a premium and the selection in and the selection .
+0.6148936170212767 0.0002107102477130229
