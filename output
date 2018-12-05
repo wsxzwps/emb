@@ -1,0 +1,133 @@
+options: 
+{
+    "epoch": "0",
+    "mode": "test",
+    "exp": "pose",
+    "continue_exp": null,
+    "trans_style": 0,
+    "resume_file": "checkpoint.pth.tar"
+}
+config: 
+{
+    "lang_model": {
+        "input_dropout_p": 0,
+        "wordDict": "../AuxData/wordDict",
+        "dropout_p": 0,
+        "hidden_size": 512,
+        "style_size": 100,
+        "rnn_cell": "gru",
+        "n_layers": 1,
+        "bidirectional": 0,
+        "embedding": "../AuxData/word2vec.npy"
+    },
+    "evaluator": {
+        "use_lang_model": 1,
+        "wordDict": "../AuxData/wordDict"
+    },
+    "expPath": "./exp/pose",
+    "pos_model": "../AuxData/langModel/lm_bestmodel_pos",
+    "model": {
+        "input_dropout_p": 0,
+        "wordDict": "../AuxData/wordDict",
+        "dropout_p": 0,
+        "hidden_size": 512,
+        "style_size": 100,
+        "rnn_cell": "gru",
+        "n_layers": 1,
+        "bidirectional": 1,
+        "embedding": "../AuxData/word2vec.npy"
+    },
+    "crit": {
+        "use_lang_model": 1,
+        "wordDict": "../AuxData/wordDict"
+    },
+    "neg_model": "../AuxData/langModel/lm_bestmodel_neg",
+    "LmPath": "../AuxData/langModel",
+    "metric": {
+        "classifier_weight_path": "./exp/classifier",
+        "ref_file": "../Data/yelp/reference"
+    },
+    "loader": {
+        "trainFile": "../Data/yelp/sentiment.train",
+        "devFile": "../Data/yelp/sentiment.trainsmall",
+        "isTrans": 0,
+        "batchSize": 64,
+        "wordDict": "../AuxData/wordDict",
+        "negStyleDict": "../AuxData/neg_style_count",
+        "testFile": "../Data/yelp/sentiment.test",
+        "posStyleDict": "../AuxData/pos_style_count",
+        "selfatt": "../AuxData/selfatt.pt",
+        "useNoise": 1
+    },
+    "trainer": {
+        "lm_lr": 0.01,
+        "lr": 0.0001
+    }
+}
+crit...
+Language model...
+Language model...
+Loading language models.
+=> Reloading checkpoint '../AuxData/langModel/lm_bestmodel_pos.pth.tar': model
+=> Reloading checkpoint '../AuxData/langModel/lm_bestmodel_neg.pth.tar': model
+=> Reloading checkpoint './exp/classifier/selfatt.pt': model
+["do n't go here unless you want to pay for crap .", 'Go here the food is very good !\n']
+['but it may not actually be in stock anyway .', 'Everything is always in stock here. \n']
+['owner : a very rude man .', 'The owner was such a friendly person.\n']
+['this place is a terrible place to live !', 'This place is a great place to live !\n']
+['stopped by for soda after being at the hobby shop next door .', 'after the hobby shop i stopped in for a soda and enjoyed it\n']
+['my dish was pretty salty and could barely taste the garlic crab .', 'my dish had the perfect amount of salt and the garlic crab was great\n']
+['it looks like blended up chicken put into the shape of grilled pieces .', 'the blended up chicken was made just the way i wanted it\n']
+['what about the time i wasted ?', 'service was quick and swift\n']
+['there are better happy hours and better beers all around mill !', 'one of the best happy hours anywhere\n']
+['the rooms are not that nice and the food is not that good either .', 'the rooms were spacious and food was very well cooked\n']
+['executive chefs would walk by not even saying good morning .', 'the excecutive chef was nice and said good morning to us very often\n']
+['this spot was my favorite indian restaurant .', 'such a great indian restaurant\n']
+['not even real brown sauce .', 'the brown sauce was very authentic\n']
+['i will not revisit this course as a visitor with limited time to play .', 'i will come here very often as they give us ample time to play\n']
+['but was very disappointed with what actually arrived .', 'was very happy with what arrived.\n']
+["his offer of a `` free dessert '' was even more atrocious .", 'his offer of a "free dessert" was even more appreciated.\n']
+['i was so disgusted i could not way for the rest of the day .', 'i was so full i could not way for the rest of the day.\n']
+['the salads are ok , nothing special .', 'the salads are great, really something special.\n']
+['overall it was a miserable evening .', 'overall it was an exceptional evening.\n']
+["the woman did n't even apologize .", 'she would have apologised but she was in a hurry\n']
+['i expected service to be slow that morning , and it was .', 'there was more people than the usual so it was a little backed up\n']
+['zero complaints with his work .', 'he did a great job and continues to\n']
+['the garlic bread was bland and cold .', 'it was sitting out for a while on the counter because someone forgot it there\n']
+['the espresso was way too hot .', 'it seems it was warmed up a tad too bit\n']
+['i know i should have sent this back and walk out .', "i know i shouldn't have sent this back and walked out .\n"]
+["they wo n't tell you though .", 'they will tell you though .\n']
+['i love the food ... however service here is horrible .', ' i love the food ... and service here is awesome .\n']
+['gammage itself however is not so amazing .', ' gammage itself however is so amazing .\n']
+['needless to say i will not be back for mexican food .', 'needless to say i will be back for mexican food .\n']
+["i wo n't be ordering again .", "my order was great and i'll do it again\n"]
+["let me give my opinion , that 's what this site is for .", 'my opinion is great for this place\n']
+['she did not apologize or anything .', 'she apologized immensily\n']
+['prices are just plain retail .', 'price were better then retail\n']
+['but this place was not economical so the expectation was different .', 'the place was exactly as expected\n']
+["it smelled and tasted like yesterday 's oil .", 'It smelled and tasted wonderful.\n']
+['who knows , it might have been .', 'It was indeed.\n']
+['the beer sauce is lackluster at best .', 'The beer sauce was terrific.\n']
+['the building itself looks abandoned .', 'The building looks modern.\n']
+["we 've tried the cream pancakes as well .", 'We loved the cream pancakes too.\n']
+["i 've never had a worse experience than this !", "this place wasn't bad\n"]
+["no , i 'm not at a scottsdale club .", 'this was a great club\n']
+['if i could give zero stars i def would .', 'the stars was 5 plus\n']
+["only now i 'm really hungry , and really pissed off .", "i had a great time and i'm happy\n"]
+['no call , no nothing .', 'they called to help\n']
+['i wish i could give less than one star .', 'i wish there were more stars to give\n']
+['the wonton was seriously lacking filling .', 'wow the wonton soup was one of a kind\n']
+['if i could give less stars , i would .', 'i would give an extra star if it allowed me\n']
+['she could not and would not explain herself .', 'she explained herself great so that we understood\n']
+['think twice -- this place is a dump .', 'i would not think twice to visit here again\n']
+["i 'm not one of the corn people .", "I'm one of the corn people. \n"]
+["it 's always busy and the restaurant is very dirty .", "It's not always busy, and the restaurant is very clean.\n"]
+["even if i was insanely drunk , i could n't force this pizza down .", 'I could eat this pizza even if I was insanely drunk. \n']
+['as an arizona native , i have been going to the improv for years .', 'as an Arizona native, I love going to the improv.\n']
+['i got there , was seated pretty quickly , and then chose my color .', 'We were seated quick as soon as we got there, then we glady chose colors.\n']
+['so , no treatment and no medication to help me deal with my condition .', 'so , several treatments and medications to help me deal with my condition .\n']
+['at this location the service was terrible .', 'at this location the service was awesome .\n']
+['so who do i call to get my money back .', 'so who do i call to give my money to .\n']
+['overcooked so badly that it was the consistency of canned tuna fish .', 'cooked so well that it would never be confused for canned tuna fish .\n']
+["i 'm stuck in a lease otherwise i would move .", "i 'm not stuck in a lease and if I was i wouldn't move .\n"]
+['the game room is a waste of time , energy and money .', 'game room was pretty decent, well worth the price\n']
